@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Service.css';
+import './ServiceDetails.css';
 
-const DhakaServices = ({service}) => {
+const ServiceDetails = ({service}) => {
     console.log(service);
     const {img,district,districtInfo} =service;
 
@@ -32,4 +32,4 @@ const DhakaServices = ({service}) => {
     );
 };
 
-export default DhakaServices;
+export default ServiceDetails;

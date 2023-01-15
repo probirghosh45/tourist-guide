@@ -15,7 +15,15 @@ import Contact from './Components/ContactUs/Contact';
 import OurBlogs from './Components/OurBlogs/OurBlogs';
 import Login from './Components/Login/Login/Login';
 import Registration from './Components/Login/Registration/Registration';
-import DhakaService from './Components/All District Details/Dhaka/DhakaService/DhakaService';
+import DhakaService from './Components/All District Details/DhakaService';
+import BarisalService from './Components/All District Details/BarisalService';
+import SylhetService from './Components/All District Details/SylhetService';
+import ChittagongService from './Components/All District Details/ChittagongService';
+import MymensinghService from './Components/All District Details/MymensinghService';
+import KhulnaService from './Components/All District Details/KhulnaService';
+import RangpurService from './Components/All District Details/RangpurService';
+import RajshahiService from './Components/All District Details/RajshahiService';
+
 
 function App() {
   return (
@@ -39,20 +47,24 @@ function App() {
 
           <Route path="/dhaka-division" element={<DhakaService/> }>
          </Route>
-         {/* <Route path="/services" element={ <OurServices></OurServices>}>
+         <Route path="/barisal-division" element={<BarisalService/>}>
          </Route>
-         <Route path="/services" element={ <OurServices></OurServices>}>
+
+         <Route path="/sylhet-division" element={<SylhetService/>}>
          </Route>
-         <Route path="/services" element={ <OurServices></OurServices>}>
+
+         <Route path="/chittagong-division" element={<ChittagongService/> }>
          </Route>
-         <Route path="/services" element={ <OurServices></OurServices>}>
+         <Route path="/mymensingh-division" element={<MymensinghService/>}>
          </Route>
-         <Route path="/services" element={ <OurServices></OurServices>}>
+
+         <Route path="/khulna-division" element={<KhulnaService/>}>
          </Route>
-         <Route path="/services" element={ <OurServices></OurServices>}>
+
+         <Route path="/rangpur-division" element={<RangpurService/>}>
          </Route>
-         <Route path="/services" element={ <OurServices></OurServices>}>
-         </Route> */}
+         <Route path="/rajshahi-division" element={<RajshahiService/>}>
+         </Route>
 
           <Route path="/contact" element={ <Contact></Contact>}>
          </Route>
