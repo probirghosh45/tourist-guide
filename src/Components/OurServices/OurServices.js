@@ -5,13 +5,14 @@ import './OurServices.css';
 
 const OurServices = () => {
     const [services, setServices]= useState([])
+    console.log(services)
 
     useEffect(() => {
-        fetch("/servicedb.json")
+        fetch("https://raw.githubusercontent.com/probirghosh45/tourist-guide/main/public/servicedb.json")
             .then(res => res.json())
-            .then(data => {
-                const reverseData = data.slice().reverse();
-                setServices(reverseData.slice(0, 8));
+            .then(data => {setServices(data)
+                // const reverseData = data.slice().reverse();
+                // setServices(reverseData.slice(0, 8));
             });
     }, []);
     return (
@@ -38,7 +39,7 @@ const OurServices = () => {
         <Container>
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
 
-                {services.map(service => <Service key={service._id} service={service}/>)}
+                {services.map(service => <Service key={service._id} service={service.division}/>)}
             </div>
         </Container>
     </div>
