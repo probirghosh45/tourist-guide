@@ -8,7 +8,7 @@ const OurServices = () => {
     console.log(services)
 
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/probirghosh45/tourist-guide/main/public/servicedb.json")
+        fetch("https://raw.githubusercontent.com/probirghosh45/tourist-guide/main/public/divisionDB.json")
             .then(res => res.json())
             .then(data => {setServices(data)
                 // const reverseData = data.slice().reverse();
@@ -39,7 +39,7 @@ const OurServices = () => {
         <Container>
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
 
-                {services.map(service => <Service key={service._id} service={service.division}/>)}
+                {services.map(service => <Service key={service._id} service={service}/>)}
             </div>
         </Container>
     </div>
