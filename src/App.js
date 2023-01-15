@@ -15,6 +15,7 @@ import Contact from './Components/ContactUs/Contact';
 import OurBlogs from './Components/OurBlogs/OurBlogs';
 import Login from './Components/Login/Login/Login';
 import Registration from './Components/Login/Registration/Registration';
+import DhakaService from './Components/All District Details/Dhaka/DhakaService/DhakaService';
 
 function App() {
   return (
@@ -35,6 +36,23 @@ function App() {
 
           <Route path="/services" element={ <OurServices></OurServices>}>
          </Route>
+
+          <Route path="/dhaka" element={<DhakaService/> }>
+         </Route>
+         {/* <Route path="/services" element={ <OurServices></OurServices>}>
+         </Route>
+         <Route path="/services" element={ <OurServices></OurServices>}>
+         </Route>
+         <Route path="/services" element={ <OurServices></OurServices>}>
+         </Route>
+         <Route path="/services" element={ <OurServices></OurServices>}>
+         </Route>
+         <Route path="/services" element={ <OurServices></OurServices>}>
+         </Route>
+         <Route path="/services" element={ <OurServices></OurServices>}>
+         </Route>
+         <Route path="/services" element={ <OurServices></OurServices>}>
+         </Route> */}
 
           <Route path="/contact" element={ <Contact></Contact>}>
          </Route>
