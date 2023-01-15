@@ -1,0 +1,22 @@
+.news-latter{
+    height: 65vh;
+    background-color:#FFF4D6;
+}
+.subscribe-form input{
+    letter-spacing: 6px;
+}
+
+.btn-custom{
+    background: linear-gradient(to right, #1EAF67, #2BDA73);
+    color: #fff;
+    font-weight: bold;
+    transition: all ease .3s;
+  }
+  .btn-custom:hover{
+    color: #fff;
+    text-shadow: 0px 0px 10px #fff;
+    transition: all ease .3s;
+  }
+  .color-primary{
+    color: #1EAF67;
+  }

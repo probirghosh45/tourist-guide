@@ -1,0 +1,43 @@
+[
+   
+    {
+        "img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS53X4UBCreD4dZjkGvxLHqal-W_9Iqv2kpsO1gA9HVvaVx1O24LjfCRgXc03OkDxtld3U&usqp=CAU",
+        "name":"Dhaka",
+        "description":"Dhaka has a renowned culinary heritage. The city's culture is known for its rickshaws, biryani, art festivals and religious diversity."
+    },
+    {
+        "img":"https://thefinancialexpress.com.bd/uploads/1580063956.jpg",
+        "name":"Mymensingh",
+        "description":"The town is home to a number of tourist attractions, including the Mymensingh Museum, the Mymensingh Zoo, and the Mymensingh Rajbari."
+    },
+    {
+        "img":"https://taxeszone-khulna.com/wp-content/uploads/2016/06/13043557_1094038967286136_5915182123070503188_n.jpg",
+        "name":"Khulna",
+        "description":"The district has many historical monuments, relics and ancient mosques that are great places to visit. It also contains the largest mangrove forest in the world"
+    },
+    {
+        "img":"https://www.wallpapertip.com/wmimgs/37-371499_rural-area-in-bangladesh.jpg",
+        "name":"Rajshahi",
+        "description":"Fine and cheap silk products of Rajshahi have earned it the nickname Silk City. Rajshahi is also well known for its fruits, especially for Mango and Lychee."
+    },
+    {
+        "img":"https://live.staticflickr.com/1948/31376013208_07affbd556_b.jpg",
+        "name":"Chittagong",
+        "description":"It has many popular attractions, including Foy's Lake, Guliakhali Sea Beach, Boga Lake, making it well worth a visit."
+    },
+    {
+        "img":"http://hotelgrandparkbarisal.com/wp-content/uploads/2017/03/Blog-.jpg",
+        "name":"Barisal",
+        "description":"Barisal is one of the most important districts of the Ganges delta region, rich in rivers, canal-bills, forests and natural diversity."
+    },
+    {
+        "img":"https://cdn.getyourguide.com/img/tour/5728ce3b7284b.jpeg/146.jpg",
+        "name":"Sylhet",
+        "description":"There are also several handicraft cottage industries, including mat weaving and bamboo work. Tea estates southeast of Sylhet provide most of Bangladesh's yield."
+    },
+    {
+        "img":"https://www.researchgate.net/publication/324154863/figure/fig3/AS:820011476209665@1572517379385/A-typical-post-harvest-scene-in-Ramnatha-para-Rangpur.jpg",
+        "name":"Rangpur",
+        "description":"Tourist Attractions in Rangpur Division · Tajhat Palace, Rangpur · Kantajew Temple, Dinajpur · Vinnya Jagat, Rangpur · Funcity Amusement Park, Thakurgaon."
+    }
+]

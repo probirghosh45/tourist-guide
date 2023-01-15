@@ -1,0 +1,122 @@
+.banner-img {
+    background-image:
+    linear-gradient(rgba(255,0,0,0.2),rgba(10,64,248,0.3)),url(https://upload.wikimedia.org/wikipedia/commons/a/af/2016_India_Monsoon_West_Bengal.jpg);
+    background-size: 100% 100%;
+    height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    transition: 5s;
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-duration: 30s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: running;
+    animation-timing-function: ease-out;
+    font-family: "Sofia", sans-serif;
+    text-shadow: 3px 3px 3px #ababab;
+    
+    
+}
+
+@keyframes animate{
+    0%{
+        background-image: linear-gradient(rgba(255,0,0,0.2),rgba(10,64,248,0.3)), url(https://www.bproperty.com/blog/wp-content/uploads/2021/05/shutterstock_1024830457-1.jpg);
+    } 20%{
+        background-image: linear-gradient(rgba(255,0,0,0.2),rgba(10,64,248,0.3)), url(https://www.wallpapertip.com/wmimgs/37-371499_rural-area-in-bangladesh.jpg);
+    }
+    40%{
+        background-image: linear-gradient(rgba(255,0,0,0.2),rgba(10,64,248,0.3)), url(https://qph.cf2.quoracdn.net/main-qimg-2775a90230f30d37cb29b6ab9cf0a59c-lq);
+    } 60%{
+        background-image: linear-gradient(rgba(255,0,0,0.2),rgba(10,64,248,0.3)), url(https://isbsp.daffodilvarsity.edu.bd/wp-content/uploads/2018/11/shapla.jpg);
+    } 80%{
+        background-image: linear-gradient(rgba(255,0,0,0.2),rgba(10,64,248,0.3)), url(https://live.staticflickr.com/6018/5984152617_1db9c689cc_b.jpg);
+    }
+}
+
+.banner-text h1 {
+    padding: 5px;
+    color: #f8f4f5;
+    margin-top: 10px;
+    font-size: 60px;
+    font-weight: 900;
+    font-family: 'Courier New', Courier, monospace;
+}
+.banner-text p {
+    color: #ffff;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.btn{
+    background-color: rgb(65, 131, 65);
+    color: aqua;
+    border: 1px solid gray;
+    margin: 20px;
+    padding: 5px 25px;
+    border-radius: 20px;
+} 
+
+
+
+/* ************************ */
+
+
+ .wrapper .static-text{
+    font-size: 50px;
+    color: #fff;
+    font-weight: 700;
+    
+ }
+ .wrapper .dynamic-text{
+    margin-left: 15px;
+    line-height: 80px;
+    height: 90px;
+    /* background: red; */
+    overflow: hidden;
+ }
+
+
+
+ 
+
+ .dynamic-text li{
+    list-style: none;
+    font-size: 50px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.735);
+    position: relative;
+    top: 0;
+    animation: slide 6s steps(4) infinite;
+    -webkit-animation: slide 6s steps(4) infinite;
+}
+
+@keyframes slide {
+    100%{
+        top: -300px;
+    }
+ }
+ .dynamic-text li span{
+    position: relative;
+ }
+
+ .dynamic-text li span::afer{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* background: #343F4F; */
+    border-left: 2px solid #FC6D6D;
+    animation: typing 1.5s steps(10) infinite;
+    -webkit-animation: typing 1.5s steps(10) infinite;
+}
+
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}

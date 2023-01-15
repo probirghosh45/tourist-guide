@@ -1,0 +1,16 @@
+.footer{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.footer .footer-about {
+    text-align: justify;
+}
+.y{
+    color: rgb(130, 165, 42);
+}
+.logoo img{
+    width: 150px;
+    height: 40px;
+}
+.footer-i{
+    padding-right: 145px;
+}

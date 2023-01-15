@@ -1,0 +1,83 @@
+.login-style{
+    background-color: #0a1931;
+}
+.form-container{
+    width: 500px;
+    height: 600px;
+    margin: 20px auto;
+    border: 1px solid #95A0A7;
+    border-radius: 8px;
+    padding-left: 40px;
+   
+}
+
+.form-title{
+    color: rgb(173, 18, 18);
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 42px;
+    letter-spacing: 0.0025em;
+    padding-top: 40px;
+    
+}
+
+.control label{
+    display: block;
+    text-align: left;
+    padding-left: 33px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    color: #95A0A7;
+    /* color: aliceblue; */
+}
+.control input{
+    width: 400px;
+    height: 50px;
+    border: 1px solid #95A0A7;
+    border-radius: 5px;
+    font-size: 1.5em;
+    padding-left: 10px;
+}
+.pass{
+    padding-top: 20px;
+    
+}
+.butonn{
+    padding-top: 40px;
+}
+.submit-btn{
+    width: 400px;
+    height: 50px;
+    background: rgba(255, 153, 0, 0.8);
+    border-radius: 5px;
+    border: none;
+    font-weight: 500;
+    font-size: 21px;
+    letter-spacing: 0.0015em;
+    
+}
+.submit-btn:hover{
+    background: rgba(255, 153, 0, 0.6);
+
+}
+.user-account{
+    padding-top: 30px;
+    color: rgb(173, 18, 18);
+}
+
+.google-btn button {
+    background-color: #0a1931;
+    color: aliceblue;
+    margin-top: 20px;
+    font-weight: 600;
+    padding: 9px 18px;
+    border: 2px solid #da0037;
+    border-radius: 20px;
+}
+
+.google-btn button:hover {
+    background-color: #da0037;
+}
+

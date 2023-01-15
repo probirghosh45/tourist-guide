@@ -1,0 +1,63 @@
+[
+    {
+        "img":"https://media.istockphoto.com/photos/grilled-new-zealand-lamb-chops-plated-with-sauteed-brussel-sprouts-picture-id1093395034?b=1&k=20&m=1093395034&s=170667a&w=0&h=ttpk3mu38il9Wct-nu2nfiYz03eeVXoyoMTiXLlhtkQ=",
+        "head":"Plated"
+    },
+    {
+        "img":"https://media.istockphoto.com/photos/delicious-open-buffet-with-salats-cold-dishes-and-deserts-picture-id1178836720?k=20&m=1178836720&s=612x612&w=0&h=Ku7GKc3mRELr4AMMexRlHZG_FDoC1e4DZ20UWi-AHi8=",
+        "head":"Buffet / Family"
+    },
+    {
+        "img":"https://perfectsettingcatering.com/wp-content/uploads/2020/03/JesseDan_Wedding_2529-1120x747.jpg",
+        "head":"Reception"
+    },
+    {
+        "img":"https://perfectsettingcatering.com/wp-content/uploads/2020/03/JesseDan_Wedding_2529-1120x747.jpg",
+        "head":"Recep"
+    },
+    {
+        "img":"https://media.istockphoto.com/photos/delicious-open-buffet-with-salats-cold-dishes-and-deserts-picture-id1178836720?k=20&m=1178836720&s=612x612&w=0&h=Ku7GKc3mRELr4AMMexRlHZG_FDoC1e4DZ20UWi-AHi8=",
+        "head":"Buffet / Family"
+    },
+    {
+        "img":"https://media.istockphoto.com/photos/delicious-open-buffet-with-salats-cold-dishes-and-deserts-picture-id1178836720?k=20&m=1178836720&s=612x612&w=0&h=Ku7GKc3mRELr4AMMexRlHZG_FDoC1e4DZ20UWi-AHi8=",
+        "head":"Buffet / Family"
+    },
+
+
+
+
+
+
+
+
+    {
+        "section": "reviews",
+        "photo": "https://i.pinimg.com/originals/f8/aa/0b/f8aa0b13a74e3a3c1b3b7943a7aebe09.jpg",
+        "name": "Seth R. Williams",
+        "title": "Buyer",
+        "details": "Everybody is friendly and does a good job. I've been using this pharmacy for 20 years and they have done excellent work since day 1! Keep up the good work!"
+    },
+    {
+        "section": "reviews",
+        "photo": "https://i.pinimg.com/736x/0d/12/15/0d1215a838ad9dafa24a7c5177c3cee4.jpg",
+        "name": "Denise W. Griffith",
+        "title": "Buyer",
+        "details": "I'm always greeted with a friendly smile. I love how they keep the drive-through flowing - if somebody's waiting for a services, they have them drive around! "
+    },
+    {
+        "section": "reviews",
+        "photo": "https://calvinthomas.ca/wp-content/uploads/2021/02/janvi-female-headshot-review-toronto-300x300.jpg",
+        "name": "Anita C. Wallis",
+        "title": "Buyer",
+        "details": "Friendliness, compassionate, consistent, and very professional. I like that the pharmacist and his wife are setting roots in this town"
+    },
+    {
+        "section": "reviews",
+        "photo": "https://alexkaplanphoto.com/wp-content/uploads/2020/07/CORPORATE04.jpg",
+        "name": "Doris W. Ring",
+        "title": "Buyer",
+        "details": "They know who I am. I walk in and they say hi to me by name. I call in refills and a lot of them recognize my voice. It's very different than when I was using big chain. "
+    }
+]
+
