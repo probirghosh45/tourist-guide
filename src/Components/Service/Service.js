@@ -4,7 +4,7 @@ import './Service.css';
 
 const Service = ({service}) => {
     console.log(service);
-    const { division, img, description} =service;
+    const { division,divisionId,img, description} =service;
 
     return (
         <div className="col product">
@@ -22,7 +22,7 @@ const Service = ({service}) => {
 
                     </div>
 
-                    <Link to={`/${division}`}>
+                    <Link to={`/${divisionId}`}>
                     <button className="btn btn-success text-white px-4 w-75 rounded-0 order-btn "> View More</button>
                     </Link>
 

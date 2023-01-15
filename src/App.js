@@ -37,7 +37,7 @@ function App() {
           <Route path="/services" element={ <OurServices></OurServices>}>
          </Route>
 
-          <Route path="/dhaka" element={<DhakaService/> }>
+          <Route path="/dhaka-division" element={<DhakaService/> }>
          </Route>
          {/* <Route path="/services" element={ <OurServices></OurServices>}>
          </Route>
