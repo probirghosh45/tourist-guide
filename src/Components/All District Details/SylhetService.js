@@ -9,7 +9,7 @@ const SylhetService = () => {
     console.log(services)
 
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/probirghosh45/tourist-guide/main/public/servicedb.json")
+        fetch("https://raw.githubusercontent.com/Supriya-debnath/tourist-guide-visit-client/main/public/servicedb.json")
             .then(res => res.json())
             .then(data => {setServices(data)
                 // const reverseData = data.slice().reverse();

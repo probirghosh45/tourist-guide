@@ -120,7 +120,7 @@ const Footer = () => {
                                 <i className="fab fa-facebook-f  me-4 fs-4"> </i>
                             </Link >
                             <Link to='/'>
-                                <i className="fab fa-twitter  me-4 fs-4"> </i>
+                                {/* <i className="fab fa-twitter  me-4 fs-4"> </i> */}
                             </Link>
                             <Link to='/'>
                                 <i className="fab fa-linkedin-in me-4 fs-4"> </i>

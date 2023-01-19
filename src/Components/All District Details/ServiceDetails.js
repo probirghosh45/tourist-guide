@@ -4,7 +4,8 @@ import './ServiceDetails.css';
 
 const ServiceDetails = ({service}) => {
     console.log(service);
-    const {img,district,districtInfo} =service;
+    const {_id, img,district,districtInfo} =service;
+    console.log(_id)
 
     return (
         <div className="col product">
@@ -21,8 +22,12 @@ const ServiceDetails = ({service}) => {
                         </p>
 
                     </div>
+                    <ul>
+                        <li><a href="#">View Tourist Place</a></li>
+                        <li><a href="#">View Traditional food</a></li>
+                    </ul>
 
-                    <Link>
+                    <Link to={`/booking/${_id}`}>
                     <button className="btn btn-success text-white px-4 w-75 rounded-0 order-btn ">Book Now</button>
                     </Link>
 

@@ -9,7 +9,7 @@ const MymensinghService = () => {
     console.log(services)
 
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/probirghosh45/tourist-guide/main/public/servicedb.json")
+        fetch("http://localhost:5000/services/")
             .then(res => res.json())
             .then(data => {setServices(data)
                 // const reverseData = data.slice().reverse();
