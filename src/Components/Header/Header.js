@@ -2,12 +2,9 @@ import { signOut } from "firebase/auth";
 import React from "react";
 import { useContext } from "react";
 import {
-  Button,
   Container,
-  Image,
   Nav,
   Navbar,
-  NavDropdown,
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
@@ -62,16 +59,9 @@ const Header = () => {
             </Nav>
 
             <Nav>
-              {/* {
-                    user?.uid ?
-                        <>
-                            <Link id='user-profile' title={ user?.displayName || "User Name" } style={ { width: "" } }><img className=' rounded-full md:w-14' src={ user?.photoURL }></img></Link>
-                            <Link onClick={ handleLogOUt } className="btn ml-2">Log Out</Link>
-                        </>
-                        : "gg" } */}
-
               {user?.uid ? (
                 <>
+                  
                   <Link
                     id="user-profile"
                     title={user?.displayName || "User Name"}
@@ -86,19 +76,6 @@ const Header = () => {
                   <Link onClick={handleLogOut} className="btn ml-2">
                     Log Out
                   </Link>
-
-                  {/* <Nav.Link as={Link} to="/">Dashboard </Nav.Link>
-          <Nav.Link as={Link} to="/home">{user?.displayName}</Nav.Link>
-          <Nav.Link as={Link} to="/home">
-            {user?.photoURL? 
-            <Image style={{height: '30px'}} roundedCircle
-            src={user.photoURL}></Image>
-            :
-            <i class="fa-solid fa-right-to-bracket"></i>
-            }
-            </Nav.Link> */}
-
-                  {/* <button className='signIn' onClick={handleLogOut}>logout</button> */}
                 </>
               ) : (
                 <Nav.Link as={Link} to="/login">
