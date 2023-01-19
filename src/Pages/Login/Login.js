@@ -103,7 +103,7 @@ export default function Login() {
                             <span className=' flex justify-center mb-1 text-red-400'> <FaGoogle /></span>  Continue with Google</button>
 
                         {/* github button */}
-                        <button onClick={} className='border w-full p-2 mt-4 rounded hover:shadow-md shadow-green-400 drop-shadow text-slate-400 font-bold'>
+                        <button  className='border w-full p-2 mt-4 rounded hover:shadow-md shadow-green-400 drop-shadow text-slate-400 font-bold'>
                             <span className=' flex justify-center mb-1 text-red-400'> <FaGithub /></span>
                             Continue with GitHub</button>
 
