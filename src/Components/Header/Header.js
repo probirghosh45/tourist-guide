@@ -3,17 +3,18 @@ import React from 'react';
 import { useContext } from 'react';
 import { Button, Container, Image, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 // import { AuthContext } from '../Contexts/AuthProvider';
 import './Header.css';
 
 const Header = () => {
-  // const {user, logOut } = useContext(AuthContext);
+  const {user, logOut } = useContext(AuthContext);
 
-  // const handleLogOut = () =>{
-  //   logOut()
-  //   .then(() =>{})
-  //   .catch(err => console.log(err));
-  // }
+  const handleLogOut = () =>{
+    logOut()
+    .then(() =>{})
+    .catch(err => console.log(err));
+  }
 
 
     return (
@@ -30,8 +31,8 @@ const Header = () => {
           </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
-          {/* <Nav className="navbar-nav ms-auto mb-2 mb-lg-0"> */}
-          <Nav className="me-auto">
+          <Nav className="navbar-nav ms-auto mb-2 mb-lg-0">
+          {/* <Nav className="me-auto"> */}
           <Nav.Link as={Link} to="/home">Home</Nav.Link>
           <Nav.Link as={Link} to="/about">About</Nav.Link>
           <Nav.Link as={Link} to="/services">Services</Nav.Link>
@@ -39,42 +40,32 @@ const Header = () => {
           <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
           <Nav.Link as={Link} to="/contact">Contact us</Nav.Link>
 
-            {/* <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown> */}
 
           </Nav>
          
           <Nav>
      
-          {/* <Nav.Link as={Link} to="/home">PK</Nav.Link> */}
+          {user?.email?
+          <>
+          <Nav.Link as={Link} to="/">Dashboard </Nav.Link>
+          <Nav.Link as={Link} to="/home">{user?.displayName}</Nav.Link>
           <Nav.Link as={Link} to="/home">
-    
+            {user?.photoURL? 
             <Image style={{height: '30px'}} roundedCircle
-            src=""></Image>
-          
+            src={user.photoURL}></Image>
+            :
             <i class="fa-solid fa-right-to-bracket"></i>
-      
+            }
             </Nav.Link>
-          {/* <button className='signIn'>logout</button> */}
+            
+          <button className='signIn' onClick={handleLogOut}>logout</button>
+
+          </>
+          :
           <Nav.Link as={Link} to="/login">
           <button className='signIn'>Sign in</button>
-           </Nav.Link>
+           </Nav.Link>}
 
-          <Nav.Link as={Link} to="/register">
-            <button className='signIn'>Register</button>
-          </Nav.Link>
-          {/* <Nav.Link as={Link} to="/dashboard">
-            Dashboard
-          </Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
       </Container>

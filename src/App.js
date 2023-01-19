@@ -25,6 +25,9 @@ import KhulnaService from './Components/All District Details/KhulnaService';
 import RangpurService from './Components/All District Details/RangpurService';
 import RajshahiService from './Components/All District Details/RajshahiService';
 import { createContext, useState } from 'react';
+import Login from './Pages/Login/Login';
+import Registration from './Pages/Registration/Registration';
+import PrivateRoute from './Routes/PrivateRoute';
 // import PrivateRoute from './Components/Login/PrivateRoute/PrivateRoute';
 
 export const UserContext=createContext();
@@ -81,22 +84,16 @@ function App() {
           <Route path="/blogs" element={ <OurBlogs></OurBlogs>}>
          </Route>
 
-          {/* <Route path="/login" element={ <Login></Login>}>
-         </Route> */}
-
-          {/* <Route path="/register" element={ <Registration></Registration>}>
-         </Route> */}
-
-         <Route
-          path="/booking/:id" 
-          element={<Booking></Booking>}>
+          <Route path="/login" element={ <Login></Login>}>
          </Route>
-{/* 
+
+          <Route path="/register" element={ <Registration></Registration>}>
+         </Route>
+
          <Route
           path="/booking/:id" 
-          element={<Booking></Booking>}>
-         </Route> */}
-
+          element={<PrivateRoute><Booking></Booking></PrivateRoute>}>
+         </Route>
           <Route path="*" element={<NotFound />}>
             
           </Route>
