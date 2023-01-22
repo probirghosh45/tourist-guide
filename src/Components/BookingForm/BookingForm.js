@@ -13,7 +13,7 @@ const BookingForm = (props) => {
   const onSubmit = (data) => {
     console.log(data);
     data.status = "pending";
-    const uri = "http://localhost:5000/booking";
+    const uri = "https://tourist-guide-visit-server.vercel.app/booking";
     fetch(uri, {
       method: "POST",
       headers: {

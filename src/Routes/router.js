@@ -124,13 +124,13 @@ const router = createBrowserRouter([
 
   {
     path: "/dashboard",
-    errorElement: <NotFound />,
-    element: (
+    element: 
       <PrivateRoute>
         <DashboardLayout />
       </PrivateRoute>
-    ),
-    children: [
+  ,
+  errorElement: <NotFound />,
+  children: [
       {
         path: "/dashboard/add-division",
         element: <AddDivision/>,
@@ -164,7 +164,7 @@ const router = createBrowserRouter([
         element: <Report/>,
       },
       {
-        path: "/dashboard/manage-users",
+        path: "manage-users",
         element: (
             <ManageUsers/>
         ),

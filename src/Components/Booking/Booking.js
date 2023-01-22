@@ -13,7 +13,7 @@ const Booking = () => {
     const [booking, setBooking] = useState({});
     console.log(booking);
     useEffect(() => {
-        const uri = `http://localhost:5000/services/${id}`;
+        const uri = `https://tourist-guide-visit-server.vercel.app/services/${id}`;
         fetch(uri)
             .then((res) => res.json())
             .then((data) => setBooking(data));

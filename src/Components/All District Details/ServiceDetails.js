@@ -13,9 +13,9 @@ const ServiceDetails = ({ service }) => {
     <>
       <div className="col product">
         <div className="card h-100">
-          <img src={coverImg} className="card-img-top" alt={district} />
+          <img src={coverImg} className="card-img-top" alt={spotName} />
           <div className="card-body">
-            <h4 className="card-title cursive-text text-center">{spotName}</h4>
+            <h4 className="card-text cursive-text text-center">{spotName}</h4>
             <h5 className="card-text more-small-text text-muted  text-center">
               {district}
             </h5>

@@ -11,7 +11,7 @@ const Service = ({ service }) => {
       <div className="card h-100">
         <img src={img} className="card-img-top" alt={division} />
         <div className="card-body">
-          <h4 className="card-title cursive-text text-center">{division}</h4>
+          <h4 className="card-text cursive-text text-center">{division}</h4>
 
           <p className="card-text more-small-text text-muted text-justify">
             {description}
