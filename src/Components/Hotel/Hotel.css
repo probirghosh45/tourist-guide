@@ -1,0 +1,95 @@
+.hotel1{
+    font-family: "Sofia", sans-serif;
+    text-shadow: 3px 3px 3px #ababab;
+    color: #5bc5f4;
+    padding-top: 90px;
+}
+.mainSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 7px;
+}
+
+.contentBox { 
+    width: 50%;
+    /* padding-left: 20px; */
+    padding-left: 1em;
+
+}
+
+.contentBox p {
+    font-size: 15px;
+    margin: 1em 0;
+    font-family: 'poppins', sans-serif;
+}
+
+.imageContainer {
+    width: 70%;
+}
+
+.imageContainer img {
+    width: 50%;
+    height: 270px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+}
+
+/* media queries */
+
+@media screen and (max-width:900px) {
+    html {
+        font-size: 14px;
+    }
+
+    .mainSection {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 7px;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    html {
+        font-size: 14px;
+    }
+
+    .mainSection {
+        flex-direction: column;
+        margin-top: 1em;
+    }
+
+    .contentBox {
+        width: 90%;
+        margin: 0 auto;
+
+    }
+
+    .contentBox p {
+        font-size: 1.1rem;
+
+    }
+
+    .imageContainer {
+        width: 80%;
+    }
+
+}
+
+
+@media screen and (max-width:400px) {
+    .imageContainer {
+        width: 60%;
+    }
+
+    .imageContainer img {
+        width: 100%;
+        height: 150px;
+        margin: 0 auto;
+        display: block;
+        border-radius: 10px;
+    }
+}

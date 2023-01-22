@@ -35,13 +35,13 @@ const Booking = () => {
                             className="text-center left-div my-3"
                         >
                             <img
-                                src={booking?.img}
+                                src={booking?.coverImg}
                                 alt=""
                                 className="img-size pt-3"
                             />
                            
-                            <p className="products-card-para primary">
-                                Name: {booking?.district}
+                            <p className="products-card-para primary py-10">
+                                Name: {booking?.spotName}
                             </p>
 
                         </Col>

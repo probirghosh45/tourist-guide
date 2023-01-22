@@ -2,6 +2,7 @@ import React from 'react';
 import About from '../AboutUs/About';
 import Banner from '../Banner/Banner';
 import Destination from '../Destination/Destination';
+import Hotel from '../Hotel/Hotel';
 import KeepGrowing from '../KeepGrowing/KeepGrowing';
 import NewsLatter from '../NewsLatter/NewsLatter';
 import OurMenus from '../OurMenus/OurMenus';
@@ -17,6 +18,7 @@ const Home = () => {
             <OurServices></OurServices>
             <OurMenus></OurMenus>
             <Destination></Destination>
+            <Hotel></Hotel>
             <WhyBookingUs></WhyBookingUs>
             <KeepGrowing></KeepGrowing>
             <NewsLatter></NewsLatter>

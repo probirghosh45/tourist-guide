@@ -27,7 +27,7 @@ const Destination = () => {
 <Container>
 <div>
         <div className="destination service-title">
-        <h1>Top Destination</h1>
+        <h1>Photo Gallary</h1>
         </div>
         <p>
         Introduce the place where you traveled and the person you traveled with.  <br /> Your feelings and  

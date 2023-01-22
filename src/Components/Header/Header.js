@@ -1,11 +1,7 @@
 import { signOut } from "firebase/auth";
 import React from "react";
 import { useContext } from "react";
-import {
-  Container,
-  Nav,
-  Navbar,
-} from "react-bootstrap";
+import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
 // import { AuthContext } from '../Contexts/AuthProvider';
@@ -13,6 +9,7 @@ import "./Header.css";
 
 const Header = () => {
   const { user, logOut } = useContext(AuthContext);
+  console.log(user?.uid);
 
   const handleLogOut = () => {
     logOut()
@@ -47,7 +44,7 @@ const Header = () => {
               <Nav.Link as={Link} to="/services">
                 Services
               </Nav.Link>
-              <Nav.Link as={Link} to="/destination">
+              <Nav.Link as={Link} to="/dreamDestination">
                 Destination
               </Nav.Link>
               <Nav.Link as={Link} to="/blogs">
@@ -56,12 +53,18 @@ const Header = () => {
               <Nav.Link as={Link} to="/contact">
                 Contact us
               </Nav.Link>
-            </Nav>
+              <Nav.Link as={Link} to="/tourPackages">
+                <button className="signIn">Tour Packages</button>
+              </Nav.Link>
 
-            <Nav>
               {user?.uid ? (
                 <>
-                  
+                  <Nav.Link as={Link} to="/dashboard">
+                    <button className="signIn">Dashboard</button>
+                  </Nav.Link>
+                  <Nav.Link as={Link} to="/dashboard">
+                    <button className="signIn" onClick={handleLogOut}>Sign Out</button>
+                  </Nav.Link>
                   <Link
                     id="user-profile"
                     title={user?.displayName || "User Name"}
@@ -69,13 +72,19 @@ const Header = () => {
                   >
                     <img
                       className=" rounded-full md:w-14"
-                      src={user?.photoURL}
+                      // src={user?.photoURL}
+                      src={
+                        user?.photoURL
+                          ? user?.photoURL
+                          : `https://i.ibb.co/G9jFD5Q/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg`
+                      }
+                      // src={user?.photoURL || `https://i.ibb.co/G9jFD5Q/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg`}
                       alt="profile"
                     ></img>
                   </Link>
-                  <Link onClick={handleLogOut} className="btn ml-2">
+                  {/* <Link onClick={handleLogOut} className="btn ml-2">
                     Log Out
-                  </Link>
+                  </Link> */}
                 </>
               ) : (
                 <Nav.Link as={Link} to="/login">

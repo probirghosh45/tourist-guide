@@ -1,27 +1,13 @@
-// import React from 'react';
 
-// const Login = () => {
-//     return (
-//         <div>
-//             <h1>This is Login
-//             </h1>
-//         </div>
-//     );
-// };
-
-// export default Login;
-
-
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { FaGoogle, FaGithub, FaSpinner } from 'react-icons/fa';
 import React, { useContext, useState } from 'react'
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
-import { GithubAuthProvider, GoogleAuthProvider } from 'firebase/auth';
+import { GoogleAuthProvider ,GithubAuthProvider } from 'firebase/auth';
 import { useForm } from 'react-hook-form';
 
 const googleProvider = new GoogleAuthProvider();
+const githubProvider = new GithubAuthProvider();
 
 export default function Login() {
     const [error, setError] = useState('')
@@ -35,7 +21,7 @@ export default function Login() {
     const { register, watch, formState: { errors }, handleSubmit } = useForm();
 
     // from Auth context
-    const { providerSignIn, githubSignIn, user, loading, signIn } = useContext(AuthContext)
+    const { providerSignIn, user, loading, signIn } = useContext(AuthContext)
 
     // functions
     // sign in with email and pass
@@ -61,6 +47,16 @@ export default function Login() {
             })
             .catch(err => { console.error(err) })
     }
+
+        // sign in with github
+        const handleGithub = () => {
+            providerSignIn(githubProvider)
+                .then(result => {
+                    navigate(from, { replace: true })
+                })
+                .catch(err => { console.error(err) })
+        }
+
 
     // for already logged in user,
     if (user?.uid) {
@@ -103,7 +99,7 @@ export default function Login() {
                             <span className=' flex justify-center mb-1 text-red-400'> <FaGoogle /></span>  Continue with Google</button>
 
                         {/* github button */}
-                        <button  className='border w-full p-2 mt-4 rounded hover:shadow-md shadow-green-400 drop-shadow text-slate-400 font-bold'>
+                        <button onClick={handleGithub}  className='border w-full p-2 mt-4 rounded hover:shadow-md shadow-green-400 drop-shadow text-slate-400 font-bold'>
                             <span className=' flex justify-center mb-1 text-red-400'> <FaGithub /></span>
                             Continue with GitHub</button>
 

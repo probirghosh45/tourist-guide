@@ -5,37 +5,37 @@
         "district":"Narsingdi",
         "division" : "Dhaka Division",
         "spotName" : "Dream-Holiday-Park",
-        "distance" : "150 km away from Dhaka",
+        "distance" : "",
         "description" : "There are many huts in the park to accommodate the visitors, and various musical instruments are kept for entertainment. Anyone can travel to Dream Holiday Park with their families.",
         "duration" : "1-Days", 
-        "cost" : "3500"
+        "cost" : " 3500"
         },
     {
         "coverImg":"https://vromonguide.com/wp-content/uploads/Sonaimuri-Binodon-Park-Narsingdi-770x420.jpg",
         "district":"Narsingdi",
         "division" : "Dhaka Division",
         "spotName" : "sonaimuri",
-         "distance" : "150 km away from Dhaka",
+        "distance" : "",
         "description" : "Sonaimuri Benodon Park is located in Shibpur, Narsingdi. Besides this nature attraction, there is one more nature attraction listed in Narsingdi.",
         "duration" : "2-Days", 
-        "cost" : "5080"
+        "cost" : " 5080"
         },
     {
         "coverImg":"https://i.ytimg.com/vi/CVpHdo9xn0o/maxresdefault.jpg",
         "district":"Rajbari",
         "division" : "Dhaka Division",
         "spotName" : "Kalyan Dighi",
-         "distance" : "150 km away from Dhaka",
+        "distance" : "",
         "description" : "Rajdharpur village in Islampur union six miles west of Rajbari town. Kollan Dhigi near Rajdharpur village. Although this large dighi has now turned into a flat big bill, it is not difficult to determine the boundary of the dighi.",
         "duration" : "2 Days",
-        "cost" : "4500 "
+        "cost" : " 4500 "
         },
     {
         "coverImg":"https://vromonguide.com/wp-content/uploads/Nokshi-Polli-Dhaka-770x420.jpg",
         "district":"Dhaka",
         "division" : "Dhaka Division",
         "spotName" : "Nokshi Polli",
-         "distance" : "150 km away from Dhaka",
+        "distance" : "",
         "description" : "For those looking for a half-day or a short day trip close to the capital Dhaka, Bholanathpur Bazaar and Nokshi Polli can be a short trip with a different flavor.",
         "duration" : "1 Days", 
         "cost " : " 1500"
@@ -45,20 +45,20 @@
         "district":"Dhaka",
         "division" : "Dhaka Division",
         "spotName" : "Rose flower village Sadullapur",
-         "distance" : "150 km away from Dhaka",
+        "distance" : "",
         "description" : "A winding narrow path passes through the village. There are many rose gardens along the road. As far as the eye can see, only red roses. Sometimes some white rose, gladiolus, gerbera gardens are also seen.",
         "duration" : "1.5 Days",
-        "cost" : "1000"
+        "cost" : " 1000"
         },
     {
         "coverImg":"https://adarbepari.com/wp-content/uploads/2016/08/arial-beel-munshiganj.jpg",
         "district":"Munshiganj",
         "division" : "Dhaka Division",
         "spotName" : "Arial Bill ",
-         "distance" : "150 km away from Dhaka",
+        "distance" : "",
         "description" : "In the monsoon, the fields are full of water, and in the winter, the fields are dry. Only green and green as far as the eye can see. And to enjoy this beauty you have to go to Arial Bill of Munshiganj.",
         "duration" : "1 days",
-        "cost" : "3000"
+        "cost" : " 3000"
         },
 
         
@@ -68,70 +68,70 @@
             "district":"Mymensingh",
             "division" : "Mymensingh Division",
             "spotName" : "Madhutila Eco Park ",
-             "distance" : "150 km away from Dhaka",
+            "distance" : "",
             "description" : "Madhutila Eco Park is a nature reserve and eco-tourism spot in Mymensingh District, Bangladesh. It is situated at Madhutila hill range, 18 kilometers away from Mymensingh town.",
             "duration" : "2 Days 1 Night",
-            "cost" : "8400"
+            "cost" : " 8400"
             },
         {
             "coverImg":"https://nau.in/public/uploads/slider/b881c-963c4-ulhs5449-web-2.jpg",
             "district":"Mymensingh",
             "division" : "Mymensingh Division",
             "spotName" : "Agriculture university ",
-             "distance" : "150 km away from Dhaka",
+            "distance" : "",
             "description" : "The campus has an area of 5.10 square kilometres (1.97 sq mi), and is located rural surroundings 3 kilometres (1.9 mi) south of the district town of Mymensingh.",
             "duration" : "1 Days",
-            "cost" : "3000"
+            "cost" : " 3000"
             },
         {
             "coverImg":"https://vromonguide.com/wp-content/uploads/Maloncho-Jame-Mosque-Jamalpur.jpg",
             "district":"Jamalpur",
             "division" : "Mymensingh Division",
             "spotName" : "Maloncho-jame-mosque",
-             "distance" : "150 km away from Dhaka",
+            "distance" : "",
             "description" : "There is a clear water pond in front of the domed Malanch Mosque surrounded by greenery. Today the Malanch complex has become one of the tourist attractions of Jamalpur district for its aesthetic beauty.",
             "duration" : "1 Days",
-            "cost" : "3000"
+            "cost" : " 3000"
             },
         {
             "coverImg":"https://4.bp.blogspot.com/-iHbhxalQ4bY/V71yWHhoDeI/AAAAAAAAAM0/-PsVnjbWGjIMKXB0puJKiy-WPTKgP7qWQCLcB/s1600/By-the-Garo-hills-680x365.jpg",
             "district":"Sherpur",
             "division" : "Mymensingh Division",
             "spotName" : "The King of Hill ",
-             "distance" : "150 km away from Dhaka",
+            "distance" : "",
             "description" : "The king of the hill is nearly 300 feet high and a large flat land which is called king of the mountains. There was a home of king in ancient times.",
             "duration" : "1 Days",
-            "cost" : "3000"
+            "cost" : " 3000"
             },
         {
             "coverImg":"https://pbs.twimg.com/media/FLYgjeBaQAop0eH?format=jpg&name=large",
             "district":"Sherpur",
             "division" : "Mymensingh Division",
             "spotName" : "Panihata-Tarani Hills",
-             "distance" : "150 km away from Dhaka",
+            "distance" : "",
             "description" : "Panihata-Tarani Hills are well known to tourists for their natural beauty, surrounded by hills in the Ramachandrakura area bordering Garo Hills, 25 km from the city of Sherpur. ",
             "duration" : "1 Days",
-            "cost" : "3000"
+            "cost" : " 3000"
             },
         {
             "coverImg":"https://www.lrbtravelteam.com/wp-content/uploads/2020/10/Dingapota-Haor.png",
             "district":"Netrakona",
             "division" : "Mymensingh Division",
             "spotName" : "Dingapota Haor ",
-             "distance" : "150 km away from Dhaka",
+            "distance" : "",
             "description" : "Dingapota Haor, located in Mohanganj Upazila of Netrokona district, is one of the largest haors in the country.",
             "duration" : "2 Days 1 Night",
-            "cost" : "3000"
+            "cost" : " 3000"
             },
         {
             "coverImg":"https://touristbd.com/wp-content/uploads/2020/10/birishiri.png",
             "district":"Netrakona",
             "division" : "Mymensingh Division",
             "spotName" : "Birishiri ",
-             "distance" : "150 km away from Dhaka",
+            "distance" : "",
             "description" : "Birishiri is a famous tourist place in Netrokona. Every year lots of people go and visit this amazing natural beauty.",
             "duration" : "3 Days 2 Night",
-            "cost" : "3000"
+            "cost" : " 3000"
             },
 
 
@@ -142,60 +142,60 @@
             "district":"Bagerhat",
             "division" : "Khulna Division",
             "spotName" : "Sixty Dome Mosque",
-             "distance" : "150 km away from Dhaka",
+            "distance" : "",
             "description" : "Six Dome Mosque is an ancient mosque located in the southwest of Bagerhat district of Bangladesh . There is no inscription on the mosque. So there is no exact information about who built it or when it was built.",
             "duration" : "1 Days",
-            "cost" : "3000"
+            "cost" : " 3000"
             },
         {
             "coverImg":"https://vromonguide.com/wp-content/uploads/Bhutia-Paddma-Lakes-Khulna.jpg",
             "district":"Khulna",
             "division" : "Khulna Division",
             "spotName" : "Bhutia Padmabil ",
-             "distance" : "150 km away from Dhaka",
+            "distance" : "",
             "description" : "Padmabil Abhaman village of Bhutia is a reflection of the beautiful nature of Bengal, which is not seen everywhere like before.",
             "duration" : "1 Days",
-            "cost" : "4000"
+            "cost" : " 4000"
             },
         {
             "coverImg":"https://www.touristplaces.com.bd/images/pp/5/p119907.jpg",
             "district":"Jashore",
             "division" : "Khulna Division",
             "spotName" : " Chachra Shiva Mandir",
-             "distance" : "150 km away from Dhaka",
+            "distance" : "",
             "description" : "The temple was built by King Manohar Roy of Chachra in 1696. Another small roof has been built on the main rectangular four-story roof of the eight-story-type Chachra Shiva Temple.",
             "duration" : "1 Days",
-            "cost" : "3080"
+            "cost" : " 3080"
             },
         {
             "coverImg":"https://curlytales.com/wp-content/uploads/2020/11/Untitled-2020-11-12T121110.210.jpg",
             "district":"Jashore",
             "division" : "Khulna Division",
             "spotName" : " Floating bridge",
-             "distance" : "150 km away from Dhaka",
+            "distance" : "",
             "description" : "A 1300 feet long floating bridge (Vashoman Shetu) has been constructed at Jhopa Baor in Manirampur, Jashore. ",
             "duration" : "2 Days 1 Night",
-            "cost" : "5000"
+            "cost" : " 5000"
             },
         {
             "coverImg":"https://i0.wp.com/study-research.net/wp-content/uploads/2018/04/DSC_0049R.jpg?resize=678%2C484",
             "district":"Narail",
             "division" : "Khulna Division",
             "spotName" : " Niharranjan Gupta's house",
-             "distance" : "150 km away from Dhaka",
+            "distance" : "",
             "description" : "Niharranjan Gupta's house is decorated with elaborate wooden flowers and foliage on the doors, windows and wall cupboards making the house more attractive.",
             "duration" : "1 Days",
-            "cost" : "8000"
+            "cost" : " 8000"
             },
         {
             "coverImg":"https://www.localguidesconnect.com/t5/image/serverpage/image-id/706948i0389B6FB291D424F/image-size/large?v=v2&px=999",
             "district":"kushtia",
             "division" : "Khulna Division",
             "spotName" : "Kuthibari of Rabindranath Tagore ",
-             "distance" : "150 km away from Dhaka",
+            "distance" : "",
             "description" : "That place is used as a museum nowadays, which is named as Mir Mosharrof Hossain Memorial ",
             "duration" : "2 Days 1 Night",
-            "cost" : "3000"
+            "cost" : " 3000"
             },
 
 
@@ -205,30 +205,30 @@
             "district":"",
             "division" : "Rajshahi Division",
             "spotName" : "",
-             "distance" : "150 km away from Dhaka",
+            "distance" : "",
             "description" : " ",
             "duration" : "2 Days 1 Night",
-            "cost" : "3000"
+            "cost" : " 3000"
             },
         {
             "coverImg":"",
             "district":"",
             "division" : "Rajshahi Division",
             "spotName" : "",
-             "distance" : "150 km away from Dhaka",
+            "distance" : "",
             "description" : " ",
             "duration" : "2 Days 1 Night",
-            "cost" : "3000"
+            "cost" : " 3000"
             },
         {
             "coverImg":"",
             "district":"",
             "division" : "Rajshahi Division",
             "spotName" : "",
-             "distance" : "150 km away from Dhaka",
+            "distance" : "",
             "description" : " ",
             "duration" : "2 Days 1 Night",
-            "cost" : "3000"
+            "cost" : " 3000"
             },
 
 
@@ -240,30 +240,30 @@
                 "district":"Rangpur",
                 "division" : "Rangpur Division",
                 "spotName" : "Gaibandha Pouro Park",
-                 "distance" : "150 km away from Dhaka",
+                "distance" : "",
                 "description" : " Gaibandha Pouro Park is an open space and social recreation center under the control of Gaibandha Municipality.",
                 "duration" : "2 Days 1 Night",
-                "cost" : "3000"
+                "cost" : " 3000"
                 },
             {
                 "coverImg":"https://www.dailyinqilab.com/news_original/1574580052_bangladesher-dorshonio-stha.jpg",
                 "district":" Lalmonirhat ",
                 "division" : "Rangpur Division",
                 "spotName" : "Burimari land port",
-                 "distance" : "150 km away from Dhaka",
+                "distance" : "",
                 "description" : "Burimari land port is one of the land ports of Bangladesh. Many people come to this land port to see the end of Bangladesh. ",
                 "duration" : "2 Days 1 Night",
-                "cost" : "3000"
+                "cost" : " 3000"
                 },
             {
                 "coverImg":"https://www.tbsnews.net/sites/default/files/styles/infograph/public/images/2020/10/31/kachanuy_0.jpg",
                 "district":"Panchagarh",
                 "division" : "Rangpur Division",
                 "spotName" : "Kanchenjunga from Tentulia",
-                 "distance" : "150 km away from Dhaka",
+                "distance" : "",
                 "description" : " At Tentulia Upazila Sadar there is a historic Dakbungalow built in Victorian style built by King Katrik of Cooch Behar.",
                 "duration" : "2 Days 1 Night",
-                "cost" : "3000"
+                "cost" : " 3000"
                 },
 
 
@@ -275,10 +275,10 @@
                     "district":"Sunamganj",
                     "division" : "Sylhet Division",
                     "spotName" : "Tanguar Haor",
-                     "distance" : "150 km away from Dhaka",
+                    "distance" : "",
                     "description" : "Tanguar Haor is a river basin which is located at the Tahirpur Upazila of Sunamgonj district in Sylhet Division. ",
                     "duration" : "3 Days 1 Night",
-                    "cost" : "3000"
+                    "cost" : " 3000"
                     },
 
                     {
@@ -286,20 +286,20 @@
                         "district":"Moulvibazar",
                         "division" : "Sylhet Division",
                         "spotName" : "Madhavkund Falls",
-                         "distance" : "150 km away from Dhaka",
+                        "distance" : "",
                         "description" : "Madhabkunda Waterfall is located in Baralekha Upazila of Moulvibazar District. ",
                         "duration" : "2 Days 1 Night",
-                        "cost" : "3000"
+                        "cost" : " 3000"
                         },
                 {
                             "coverImg":"https://live.staticflickr.com/4112/5039274550_46bee2b722_b.jpg",
                             "district":"Habiganj",
                             "division" : "Sylhet Division",
                             "spotName" : "Polo Baich festival",
-                             "distance" : "150 km away from Dhaka",
+                            "distance" : "",
                             "description" : " Polo Bawa Utshob (Polo Bawa Utshob) is organized in Deoklas, Dasghar, Daulatpur, Madai etc. in Bishwanath Upazila and Howre.",
                             "duration" : "2 Days 1 Night",
-                            "cost" : "3000"
+                            "cost" : " 3000"
                             },
                             
           
@@ -310,10 +310,10 @@
                 "district":"Barguna",
                 "division" : "Barisal Division",
                 "spotName" : "Tengragiri Ecopark",
-                 "distance" : "150 km away from Dhaka",
+                "distance" : "",
                 "description" : " Due to the wonderful mixture of salted and sweet soil, the forest contains numerous rows of trees, animals, and reptiles of extinct species. ",
                 "duration" : "2 Days 1 Night",
-                "cost" : "3000"
+                "cost" : " 3000"
                 },
 
                 {
@@ -321,20 +321,20 @@
                     "district":"Patuakhali ",
                     "division" : "Barisal Division",
                     "spotName" : "Patuakhali Buddhist Monastery",
-                     "distance" : "150 km away from Dhaka",
+                    "distance" : "",
                     "description" : "Patuakhali Buddhist Vihar is located on the south side of Titas (formerly Saikat) Cinema Hall in Sadar Upazila of Patuakhali district. ",
                     "duration" : "2 Days 1 Night",
-                    "cost" : "3000"
+                    "cost" : " 3000"
                     },
                     {
                         "coverImg":"https://editorial01.shutterstock.com/preview/10973967e/d1cfd216/Shutterstock_10973967e.jpg",
                         "district":"",
                         "division" : "Barisal Division",
                         "spotName" : "Atghar Kuriana Floating ",
-                         "distance" : "150 km away from Dhaka",
+                        "distance" : "",
                         "description" : "The 200 years old floating guava markets of Atghar Kuriana is renowned not only in Bangladesh but also in Asia. ",
                         "duration" : "2 Days 1 Night",
-                        "cost" : "3000"
+                        "cost" : " 3000"
                         },
                 
             
@@ -344,30 +344,30 @@
                     "district":"Rangamati",
                     "division" : "Chittagong Division",
                     "spotName" : "Kaptai Lake",
-                     "distance" : "150 km away from Dhaka",
+                    "distance" : "",
                     "description" : "It is also the country’s only navigable inland waterway. The lake was created by building the Kaptai Dam across the Karnaphuli River.  ",
                     "duration" : "5 Days",
-                    "cost" : "9000"
+                    "cost" : " 9000"
                     },
                     {
                         "coverImg":"https://i.ytimg.com/vi/Pe5ZyA-dFmw/maxresdefault.jpg",
                         "district":"Lakshmipur",
                         "division" : "Chittagong Division",
                         "spotName" : "Altaf Master Ghat",
-                         "distance" : "150 km away from Dhaka",
+                        "distance" : "",
                         "description" : " Altaf Master's Ghat is built in a picturesque rural environment in the remote area of North Charbanshi Union of Raipur Upazila of Lakshmipur.",
                         "duration" : "2 Days 1 Night",
-                        "cost" : "3000"
+                        "cost" : " 3000"
                         },
                     {
                             "coverImg":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBVUKlfyQvcliOqz2FtX4_yPPRVTFTWSoJoQ29tBNCpO7__EuZUkYW8z72Vf8s4GgnRgw&usqp=CAU",
                             "district":"Brahmanbaria ",
                             "division" : "Chittagong Division",
                             "spotName" : "Hatirpool ",
-                             "distance" : "150 km away from Dhaka",
+                            "distance" : "",
                             "description" : " Hatirpool is one of the ancient bridges in Sarail Upazila of Brahmanbaria District,",
                             "duration" : "2 Days 1 Night",
-                            "cost" : "3000"
+                            "cost" : " 3000"
                      }
 
 
