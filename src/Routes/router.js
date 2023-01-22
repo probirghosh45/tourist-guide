@@ -7,7 +7,6 @@ import Booking from "../Components/Booking/Booking";
 import NotFound from "../Components/NotFound/NotFound";
 import PrivateRoute from "./PrivateRoute";
 import DreamDestination from "../Components/DreamDestination/DreamDestination";
-import TourPackage from "../Components/TourPackage/TourPackage";
 import OurServices from "../Components/OurServices/OurServices";
 import DhakaService from "../Components/All District Details/DhakaService";
 import BarisalService from "../Components/All District Details/BarisalService";
@@ -32,6 +31,7 @@ import Report from "../Pages/dashboard/Admin/Report";
 import Wishlist from "../Pages/dashboard/Users/Wishlist";
 import AddDivision from "../Pages/dashboard/Admin/AddDivision";
 import ManageDivision from "../Pages/dashboard/Admin/ManageDivision";
+import TourPackages from "../Components/TourPackages/TourPackages";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -96,7 +96,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/tour-package",
-        element: <TourPackage/>,
+        element: <TourPackages/>,
       },
       {
         path: "/login",

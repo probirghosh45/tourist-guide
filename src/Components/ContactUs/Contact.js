@@ -16,8 +16,8 @@ const Contact = () => {
             <br />
             <h4>E-mail</h4>
             <hr />
-            <h6>For Tour Purpose: tour@beautyofruralengal.com <br />
-            For Official Purpose: info@beautyofruralengal.com</h6>
+            <h6>For Tour Purpose: tour@beautyofruralbengal.com <br />
+            For Official Purpose: info@beautyofruralbengal.com</h6>
           </div>
         </Col>
 

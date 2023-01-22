@@ -1,11 +1,13 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
 import './Hotel.css';
 
 const Hotel = () => { 
     return (
         <>
-            <h1 className='hotel1'>Rural Bangal Hotels</h1>
-            <p> <em>These hotels in rural Bengal will be really enjoyable for you!!!!</em> </p>
+           <Container>
+           <h1 className='text-center hotel1'>Rural Bangal Hotels</h1>
+            <p className='text-center'> <em>These hotels in rural Bengal will be really enjoyable for you!!!!</em> </p>
             <hr />
             <div className="mainSection"> 
 
@@ -58,6 +60,7 @@ const Hotel = () => {
                 </div>
             </div>
             <hr />
+           </Container>
 
 
         </>

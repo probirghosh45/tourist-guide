@@ -6,9 +6,11 @@ const OurMenus = () => {
     return (
         <div className='blogs'>
             <Container>
+             <div className='text-center'>
              <h2 className='menus'>Our Menus Items</h2>  
              <p className='title1'>SELECT FROM THE FOLLOWING MENU OPTIONS
                 </p>
+             </div>
                 <hr />
                 <Row >
                     <Col md={4} xs={12} className="my-2"> 

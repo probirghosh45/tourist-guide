@@ -7,7 +7,7 @@ const TourPackages = () => {
     console.log(packages);
 
     useEffect(() => {
-        fetch("/packagesDB.json")
+        fetch("/packagesDB.json") 
             .then(res => res.json())
             .then(data => {setPackages(data)
                 // const reverseData = data.slice().reverse();
@@ -16,7 +16,7 @@ const TourPackages = () => {
     }, []);
     return (
         <div className="mb-4">
-		<div class="bg-white px-4 py-3 mb-3">
+		<div class="text-center bg-white px-4 py-3 mb-3">
 						<h1 class="text-18 text-bold text-center border-bottom pb-3 mb-3">Travel Bangladesh : <span class="text-red">Tour Packages</span></h1>
 						<p> Discovery Bangladesh operate various regular, customize and special Bangladesh tour packages round the year. Which include  <br /> luxury Bangladesh tour packages, City Sightseeing and River Cruising tour packages, Archaeological Sites & Cultural Tour, <br /> Adventure & Wildlife tours and many more tour packages. <br /> Come and explore Bangladesh with us and Discover Bangladesh Naturally! </p>
 						<p><strong>Tour Packages From Discovery Bangladesh</strong></p>

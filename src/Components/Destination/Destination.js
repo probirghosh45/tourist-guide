@@ -26,10 +26,10 @@ const Destination = () => {
         <>
 <Container>
 <div>
-        <div className="destination service-title">
+        <div className="text-center destination service-title">
         <h1>Photo Gallary</h1>
         </div>
-        <p>
+        <p className='text-center'>
         Introduce the place where you traveled and the person you traveled with.  <br /> Your feelings and  
         expectations about this trip were.
         </p>

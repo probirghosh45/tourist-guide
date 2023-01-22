@@ -50,7 +50,7 @@ const Review = () => {
     };
     return (
         <Container className='mt-5 overflow-hidden'>
-            <h2 className="gallery service-title fs-1 fw-bold mt-5 text-1 mb-0 text-uppercase">What Our Client’s Say</h2>
+            <h2 className="text-center gallery service-title fs-1 fw-bold mt-5 text-1 mb-0 text-uppercase">What Our Client’s Say</h2>
             <p className='team-title get col-md-7 mx-auto mb-4 '>Get unbiased ratings and reviews for services from Consumer Reports, plus trusted advice and in-depth reporting on what matters most.</p>
 
             <Slider {...settings}>

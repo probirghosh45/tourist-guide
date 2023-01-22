@@ -107,7 +107,7 @@ const Footer = () => {
 
                             <p className="small-text">
                                 <i className="fas fa-envelope me-3"></i>
-                                info@beautyofruralengal.com
+                                info@beautyofruralbengal.com
                             </p>
 
                             <p className="small-text">
@@ -132,12 +132,10 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-            </section>
-
-            {/* Copyright */}
+                {/* Copyright */}
             <div
-                className="text-center p-3 small-text"
-                style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+                className="text-center p-3 small-text "
+                // style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
             >
                 <span className="me-2">© 2022 Copyright</span>
                {/* <span className='y'> Catering & Event Management</span> */}
@@ -146,6 +144,9 @@ const Footer = () => {
                     Beauty Of Rural Bangal
                 </NavLink>
             </div>
+            </section>
+
+            
         </footer>
     );
 };

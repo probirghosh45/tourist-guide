@@ -7,7 +7,7 @@ const Banner = () => {
             <>
             <div className="banner-img">
         <div className="banner-text">
-        <p className='animate__animated animate__fadeInDown'>
+        <p className='text-center animate__animated animate__fadeInDown'>
                 We Have Rice History And Culture.
             </p>
             {/* <div className='animate__animated animate__zoomIn'>
@@ -17,7 +17,7 @@ const Banner = () => {
 
 
 
-            <div className="wrapper">
+            <div className="text-center wrapper">
                 <div className="static-text">Observing The Beauty</div>
                 <ul className="dynamic-text">
                     <li> <span>Rural Bengal</span> </li>
@@ -29,7 +29,7 @@ const Banner = () => {
 
             {/* <button className="btn animate__animated animate__fadeInUp">Learn More</button> */}
 
-            <div className='google-btn'>
+            <div className='text-center google-btn'>
                 <button className="btn animate__animated animate__fadeInUp">Learn More</button>
             </div>
 
