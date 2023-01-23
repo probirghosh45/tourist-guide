@@ -23,7 +23,7 @@ const Header = () => {
         <Container>
           <Navbar.Brand href="#home">
             <img
-              src="https://thumbs.dreamstime.com/z/travel-logo-design-agency-vector-inspiration-template-218267349.jpg"
+              src="https://i.ibb.co/NCcdyxf/travel-logo-design-agency-vector-inspiration-template-218267349.jpg"
               alt=""
               width="30"
               height="30"
