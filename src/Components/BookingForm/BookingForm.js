@@ -5,7 +5,7 @@ import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
 import "./Booking.css";
 
 const BookingForm = (props) => {
-  const { cost } = props.booking;
+  const {spotName, cost } = props.booking;
   const { user } = useContext(AuthContext);
   // console.log(user);
 
@@ -13,7 +13,7 @@ const BookingForm = (props) => {
   const onSubmit = (data) => {
     console.log(data);
     data.status = "pending";
-    const uri = "https://tourist-guide-visit-server.vercel.app/booking";
+    const uri = "http://localhost:5000/booking";
     fetch(uri, {
       method: "POST",
       headers: {
@@ -51,10 +51,10 @@ const BookingForm = (props) => {
           readOnly
           defaultValue={user?.email}
         />
+        <input {...register("spotName")} type="text" readOnly defaultValue={spotName} />
         <input {...register("cost")} type="text" readOnly defaultValue={cost} />
-
-        <input {...register("text")} placeholder="Select Date" />
-        <input {...register("text")} placeholder="Enter your address" />
+        <input {...register("dateData")} placeholder="Select Date" />
+        <input {...register("addressData")} placeholder="Enter your address" />
         <input
           type="text"
           {...register("phoneNumber")}
@@ -66,3 +66,4 @@ const BookingForm = (props) => {
   );
 };
 export default BookingForm;
+
