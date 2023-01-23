@@ -9,7 +9,7 @@ const BarisalService = () => {
     console.log(services)
 
     useEffect(() => {
-        fetch("https://tourist-guide-visit-server.vercel.app/services/")
+        fetch("https://tourist-guide-visit-server.vercel.app/services")
             .then(res => res.json())
             .then(data => {setServices(data)
                 // const reverseData = data.slice().reverse();
