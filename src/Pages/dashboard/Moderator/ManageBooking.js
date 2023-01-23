@@ -9,7 +9,7 @@ const ManageBooking = () => {
 
 
   useEffect( () => {
-    fetch(`http://localhost:5000/booking`)
+    fetch(`https://tourist-guide-visit-server.vercel.app/booking`)
     .then(res => res.json())
     .then((data) => {
       console.log(data);
@@ -20,7 +20,7 @@ const ManageBooking = () => {
   const handleDelete = id => {
     const deleteConfirmation = window.confirm('Are you sure to delete this booking');
     if(deleteConfirmation){
-      const url = `http://localhost:5000/delete-booking/${id}`;
+      const url = `https://tourist-guide-visit-server.vercel.app/delete-booking/${id}`;
       fetch(url, {
         method: 'DELETE'
       })
