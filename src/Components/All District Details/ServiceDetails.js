@@ -16,15 +16,15 @@ const ServiceDetails = ({ service }) => {
           <img src={coverImg} className="card-img-top" alt={spotName} />
           <div className="card-body">
             <h4 className="card-text cursive-text text-center">{spotName}</h4>
-            <h5 className="card-text more-small-text text-muted  text-center">
+            <h6 className="card-text more-small-text text-muted  text-center">
               {district}
-            </h5>
+            </h6>
             <p className="card-text more-small-text text-muted  text-center">
               {description}
             </p>
-            <p className="card-text more-small-text text-muted  text-center">
+            <h5 className="card-text more-small-text text-muted  text-center">
               {duration} {cost}
-            </p>
+            </h5>
           </div>
 
           <Link to={`/booking/${_id}`}>
