@@ -111,7 +111,6 @@ const Contact = () => {
             pageId="489402087935358"
             appId="367297488288509"
           />
-          ,
         </Container>
       </section>
     </>
