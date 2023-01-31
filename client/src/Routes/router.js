@@ -32,6 +32,7 @@ import Wishlist from "../Pages/dashboard/Users/Wishlist";
 import AddDivision from "../Pages/dashboard/Admin/AddDivision";
 import ManageDivision from "../Pages/dashboard/Admin/ManageDivision";
 import TourPackages from "../Components/TourPackages/TourPackages";
+import SingleService from "../Components/SingleService/SingleService";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -53,6 +54,12 @@ const router = createBrowserRouter([
       {
         path: "/services",
         element: <OurServices/>,
+      },
+      {
+        path: "/division/:id",
+        element: <SingleService/>,
+        loader : ({params})=>
+        fetch(`${process.env.REACT_APP_API_URL}/division/${params.id}`)
       },
       {
         path: "/dhaka-division",

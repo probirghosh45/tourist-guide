@@ -4,21 +4,20 @@ import "./Service.css";
 
 const Service = ({ service }) => {
   console.log(service);
-  const { division, divisionId, img, description } = service;
+  const { name, image, description ,_id } = service;
 
   return (
     <div className="col product">
       <div className="card h-100">
-        <img src={img} className="card-img-top" alt={division} />
+        <img src={image} className="card-img-top" alt={name} />
         <div className="card-body">
-          <h4 className="card-text cursive-text text-center">{division}</h4>
+          <h4 className="card-text cursive-text text-center">{name}</h4>
 
           <p className="card-text more-small-text text-muted text-justify">
             {description}
           </p>
         </div>
-
-        <Link to={`/${divisionId}`}>
+        <Link to={`/division/${_id}`}>
           <div className="row justify-content-center">
             <button className="btn btn-success text-white px-4 w-75 rounded-0 order-btn ">
               {" "}

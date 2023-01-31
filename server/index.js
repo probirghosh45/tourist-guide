@@ -36,7 +36,7 @@ async function run() {
     // Add Division API
     app.post("/add-division", async (req, res) => {
       const division = req.body;
-    //   console.log("Check division", division);
+      //   console.log("Check division", division);
       const result = await divisionCollection.insertOne(division);
       console.log(result);
       res.json(result);
@@ -48,34 +48,40 @@ async function run() {
       res.json(result);
     });
 
-    
-    app.get("/add-spot-division-wise",async (req, res) => {
-        const query = {};
-        const option = { name: 1 };
-        const result = await divisionCollection.find(query).project(option).toArray();
-        res.send(result);
-      }
-    );
+    app.get("/add-spot-division-wise", async (req, res) => {
+      const query = {};
+      const option = { name: 1 };
+      const result = await divisionCollection
+        .find(query)
+        .project(option)
+        .toArray();
+      res.send(result);
+    });
 
+    // Add spot POST requests
+    app.post("/add-spot", async (req, res) => {
+      const spot = req.body;
+      console.log("Add Spot API", spot);
+      const result = await spotCollection.insertOne(spot);
+      console.log(result);
+      // res.json(result);
+    });
 
-      // Add spot POST requests
-      app.post("/add-spot", async (req, res) => {
-        const spot = req.body;
-        console.log("Add Spot API", spot);
-        const result = await spotCollection.insertOne(spot);
-        console.log(result);
-        // res.json(result);
-      });
-  
-  
-      // Manage spot GET requests
-      app.get("/manage-spot", async (req, res) => {
-        const email = req.query.email;
-        const query = { email: email };
-        const result = await spotCollection.find(query).toArray();
-        res.send(result);
-      });
+    // Manage spot GET requests for the specified
+    app.get("/manage-spot", async (req, res) => {
+      const email = req.query.email;
+      const query = { email: email };
+      const result = await spotCollection.find(query).toArray();
+      res.send(result);
+    });
 
+    // Manage spot GET requests
+    app.get("/division/:id", async (req, res) => {
+      const  id = req.params.id;
+      const query = {division : id};
+      const result = await spotCollection.find(query).toArray();
+      res.send(result);
+    });
 
     // GET Services API
     app.get("/services", async (req, res) => {

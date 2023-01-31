@@ -5,7 +5,7 @@ import "./ServiceDetails.css";
 
 const ServiceDetails = ({ service }) => {
   console.log(service);
-  const { _id, coverImg, district, spotName, description, duration, cost } =
+  const { _id, image, district, spotName, description, duration, cost , distance } =
     service;
   console.log(_id);
 
@@ -13,7 +13,7 @@ const ServiceDetails = ({ service }) => {
     <>
       <div className="col product">
         <div className="card h-100">
-          <img src={coverImg} className="card-img-top" alt={spotName} />
+          <img src={image} className="card-img-top" alt={spotName} />
           <div className="card-body">
             <h4 className="card-text cursive-text text-center">{spotName}</h4>
             <h6 className="card-text more-small-text text-muted  text-center">
@@ -22,6 +22,9 @@ const ServiceDetails = ({ service }) => {
             <p className="card-text more-small-text text-muted  text-center">
               {description}
             </p>
+            <h6 className="card-text more-small-text text-muted  text-center">
+              {distance}
+            </h6>
             <h5 className="card-text more-small-text text-muted  text-center">
               {duration} {cost}
             </h5>

@@ -8,11 +8,10 @@ const OurServices = () => {
     console.log(services)
 
     useEffect(() => {
-        fetch("https://raw.githubusercontent.com/probirghosh45/tourist-guide/main/client/public/divisionDB.json")
+        fetch(`${process.env.REACT_APP_API_URL}/division`)
             .then(res => res.json())
             .then(data => {setServices(data)
-                // const reverseData = data.slice().reverse();
-                // setServices(reverseData.slice(0, 8));
+                         
             });
     }, []);
     return (

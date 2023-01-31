@@ -1,22 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Container } from 'react-bootstrap';
-import ServiceDetails from './ServiceDetails';
+import { useLoaderData } from 'react-router-dom';
+import ServiceDetails from '../All District Details/ServiceDetails';
 
-// import './OurServices.css';
 
-const DhakaService = () => {
-    const [services, setServices]= useState([])
-    console.log(services)
 
-    useEffect(() => {
-        fetch(`${process.env.REACT_APP_API_URL}/all-spot`)
-            .then(res => res.json())
-            .then(data => {setServices(data)
-                console.log(data);
-            });
-    }, []);
+const SingleService = () => {
+      const spot = useLoaderData();
+      console.log("spot", spot) 
 
-      const dhakaDivision = services.filter(res =>res.name === "Dhaka")
+
 
     return (
         <div className="mb-4">
@@ -41,12 +34,11 @@ const DhakaService = () => {
 
         <Container>
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-
-                {dhakaDivision.map(service => <ServiceDetails key={service._id} service={service}/>)}
+                {spot.map(service => <ServiceDetails key={service._id} service={service}/>)}
             </div>
         </Container>
     </div>
     );
 };
 
-export default DhakaService;
+export default SingleService;
