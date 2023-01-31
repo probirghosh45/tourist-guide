@@ -25,6 +25,8 @@ import AddDivision from "../Pages/dashboard/Admin/AddDivision";
 import ManageDivision from "../Pages/dashboard/Admin/ManageDivision";
 import TourPackages from "../Components/TourPackages/TourPackages";
 import SingleService from "../Components/SingleService/SingleService";
+import MyReview from "../Pages/dashboard/Users/MyReview";
+import AllReview from "../Pages/dashboard/Moderator/AllReview";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -133,7 +135,7 @@ const router = createBrowserRouter([
         element: <Report/>,
       },
       {
-        path: "manage-users",
+        path: "/dashboard/manage-users",
         element: (
             <ManageUsers/>
         ),
@@ -142,6 +144,18 @@ const router = createBrowserRouter([
         path: "/dashboard/manage-moderator",
         element: (
             <AllModerator />
+        ),
+      },
+      {
+        path: "/dashboard/my-review",
+        element: (
+            <MyReview/>
+        ),
+      },
+      {
+        path: "/dashboard/all-review",
+        element: (
+            <AllReview/>
         ),
       },
     ],

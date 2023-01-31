@@ -1,37 +1,53 @@
+import { useQuery } from '@tanstack/react-query';
 import React, { useContext, useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
+import useTitle from '../../../hooks/useTitle';
+import Loading from '../../shared/Loading';
 
 
 const MyBooking = () => {
-    const [booking, setBooking] = useState([]);
+    
+     useTitle("My Booking");
+  // const [booking, setBooking] = useState([]);
     const {user} = useContext(AuthContext);
+    
 
+  const {data : booking  ,isLoading} = useQuery({
+     queryKey : ["myBooking"],
+     queryFn :async ()=>{
+      try{
+        const res = await fetch(
+          `${process.env.REACT_APP_API_URL}/my-booking/${user.email}`
+        );
+        const data = await res.json();
+        return data;
+      }
+       catch (err) {
+       console.error(err);
+      }
+  }
+});
 
-  useEffect( () => {
-    fetch(`https://tourist-guide-visit-server.vercel.app/my-booking/${user.email}`)
-    .then(res => res.json())
-    .then((data) => {
-      console.log(data);
-      setBooking(data);
-    })
-  }, [user.email]);
+ if(isLoading){
+  return <Loading/>
+ }
 
   const handleDelete = id => {
     const deleteConfirmation = window.confirm('Are you sure to delete this booking');
     if(deleteConfirmation){
-      const url = `https://tourist-guide-visit-server.vercel.app/delete-booking/${id}`;
+      const url = `${process.env.REACT_APP_API_URL}/delete-booking/${id}`;
       fetch(url, {
         method: 'DELETE'
       })
       .then(res => res.json())
       .then((data) => {
         console.log(data)
-        if(data.deletedCount > 0){
-          alert('Deleted Successfully');
-          const remaining = booking.filter(booking => booking._id !== id);
-          setBooking(remaining);
-        }
+        // if(data.deletedCount > 0){
+        //   alert('Deleted Successfully');
+        //   const remaining = booking.filter(booking => booking._id !== id);
+        //   setBooking(remaining);
+        // }
        
       })
     }

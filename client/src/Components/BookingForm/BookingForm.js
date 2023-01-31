@@ -9,11 +9,12 @@ const BookingForm = (props) => {
   const { user } = useContext(AuthContext);
   // console.log(user);
 
-  const { register, handleSubmit, reset } = useForm();
-  const onSubmit = (data) => {
+  const { register, handleSubmit,formState:{errors} , reset } = useForm();
+  
+  const handleBooking = (data) => {
     console.log(data);
     data.status = "pending";
-    const uri = "https://tourist-guide-visit-server.vercel.app/booking";
+    const uri = `${process.env.REACT_APP_API_URL}/booking`;
     fetch(uri, {
       method: "POST",
       headers: {
@@ -36,7 +37,7 @@ const BookingForm = (props) => {
   return (
     <div className="confirm-form w-75  mx-auto py-3">
       <h2 className="text-center">Confirm Booking</h2>
-      <form onSubmit={handleSubmit(onSubmit)} className="">
+      <form onSubmit={handleSubmit(handleBooking)} className="">
         {user?.displayName && (
           <input
             {...register("name")}
@@ -53,13 +54,22 @@ const BookingForm = (props) => {
         />
         <input {...register("spotName")} type="text" readOnly defaultValue={spotName} />
         <input {...register("cost")} type="text" readOnly defaultValue={cost} />
-        <input {...register("dateData")} placeholder="Select Date" />
-        <input {...register("addressData")} placeholder="Enter your address" />
+        <input {...register("dateData")} placeholder="Select Date" required />
+        {errors.dateData && (
+            <p className="text-red-500">{errors.dateData.message}</p>
+          )}
+        <input {...register("addressData")} placeholder="Enter your address" required />
+        {errors.addressData && (
+            <p className="text-red-500">{errors.addressData.message}</p>
+          )}
         <input
           type="text"
           {...register("phoneNumber")}
           placeholder="Enter your number"
-        />
+          required />
+            {errors.phoneNumber && (
+            <p className="text-red-500">{errors.phoneNumber.message}</p>
+          )}
         <input type="submit" className="confirmbutton" />
       </form>
     </div>
