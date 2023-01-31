@@ -1,15 +1,13 @@
-import React, { useContext } from 'react';
+import React, { useContext } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import Loading from "../../shared/Loading";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import useTitle from "../../../hooks/useTitle";
-import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
-
+import { AuthContext } from "../../../Contexts/AuthProvider/AuthProvider";
 
 const AddSpot = () => {
-
   useTitle("Add Product");
   const IMGBB_KEY = process.env.REACT_APP_IMGBB_KEY;
   const navigate = useNavigate();
@@ -27,22 +25,7 @@ const AddSpot = () => {
     queryFn: async () => {
       try {
         const res = await fetch(
-          `${process.env.REACT_APP_API_URL}/add-services`,
-        );
-        const data = await res.json();
-        return data;
-      } catch (err) {
-        console.log(err);
-      }
-    },
-  });
-
-  const { data: fetchedUser, isLoading: loading } = useQuery({
-    queryKey: ["users"],
-    queryFn: async () => {
-      try {
-        const res = await fetch(
-          `${process.env.REACT_APP_API_URl}/users/?email=${user?.email}`,
+          `${process.env.REACT_APP_API_URL}/add-spot-division-wise`
         );
         const data = await res.json();
         return data;
@@ -57,8 +40,6 @@ const AddSpot = () => {
     const formData = new FormData();
     formData.append("image", image);
     const url = `https://api.imgbb.com/1/upload?key=${IMGBB_KEY}`;
-
-    const moderatorName = user?.displayName;
     const email = user?.email;
 
     fetch(url, {
@@ -74,14 +55,17 @@ const AddSpot = () => {
             ...data,
             image,
             email,
-            moderatorName,
           };
-          fetch(`${process.env.REACT_APP_API_URl}/spot`, {
+          fetch(`${process.env.REACT_APP_API_URL}/add-spot`, {
             method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
             body: JSON.stringify(spot),
           })
             .then((res) => res.json())
             .then((result) => {
+              console.log(result);
               if (result.acknowledged) {
                 toast.success(`${data?.spotName} added success as a New Tourist Spot`);
                 navigate("/dashboard/manage-spot");
@@ -95,11 +79,6 @@ const AddSpot = () => {
   if (isLoading) {
     return <Loading />;
   }
-  if (loading) {
-    return <Loading />;
-  }
-  console.log(fetchedUser);
-
 
   return (
     <section className="m-10">
@@ -138,92 +117,33 @@ const AddSpot = () => {
           </div>
           <div>
             <label className="label">
-              <span className="label-text">Test Option 1</span>
+              <span className="label-text">District</span>
             </label>
             <input
-              {...register("testOption1", {
-                required: "Test Option is Required",
+              {...register("district", {
+                required: "District is Required",
               })}
               type="text"
               className="input input-ghost w-full  input-bordered"
             />
-            {errors.testOption1 && (
-              <p className="text-red-500">{errors.testOption1.message}</p>
+            {errors.district && (
+              <p className="text-red-500">{errors.district.message}</p>
             )}
           </div>
           <div>
             <label className="label">
-              <span className="label-text">Test Option 2</span>
+              <span className="label-text">Duration</span>
             </label>
             <input
-              {...register("testOption2", {
-                required: "Test Option 2 is Required",
+              {...register("duration", {
+                required: "Duration is Required",
               })}
               type="text"
               className="input input-ghost w-full  input-bordered"
             />
-            {errors.testOption2 && (
-              <p className="text-red-500">{errors.testOption2.message}</p>
+            {errors.duration && (
+              <p className="text-red-500">{errors.duration.message}</p>
             )}
-          </div>
-          <div>
-            <label className="label">
-              <span className="label-text">Test Option 3</span>
-            </label>
-            <input
-              {...register("Test Option 3", {
-                required: "Test Option 3  is Required",
-              })}
-              type="text"
-              className="input input-ghost w-full  input-bordered"
-            />
-            {errors.testOption3 && (
-              <p className="text-red-500">{errors.testOption3.message}</p>
-            )}
-          </div>
-          <div>
-            <label className="label">
-              <span className="label-text">Test Option 4</span>
-            </label>
-            <input
-              {...register("testOption4", {
-                required: "Test Option 3 is Required",
-              })}
-              type="text"
-              className="input input-ghost w-full  input-bordered"
-              required
-            />
-            {errors.testOption4 && (
-              <p className="text-red-500">{errors.testOption4.message}</p>
-            )}
-          </div>
-          <div>
-            <label className="label">
-              <span className="label-text">Test Option 5</span>
-            </label>
-            <input
-              {...register("testOption5", {
-                required: "Test Option 5 is Required",
-              })}
-              type="text"
-              className="input input-ghost w-full  input-bordered"
-            />
-            {errors.testOption5 && (
-              <p className="text-red-500">{errors.testOption5.message}</p>
-            )}
-          </div>
-          <div>
-            <label className="label">
-              <span className="label-text">Test Option 6</span>
-            </label>
-            <select
-              {...register("Test Option 6")}
-              className="select select-ghost w-full max-w-xs"
-            >
-              <option value="op1">op-1</option>
-              <option value="op1">op - 2</option>
-              <option value="op1">op-1</option>
-            </select>
           </div>
           <div>
             <label className="label">
@@ -243,38 +163,56 @@ const AddSpot = () => {
             </select>
           </div>
         </div>
-        <div className="form-control w-full ">
-          <label className="label">
-            <span className="label-text">Cover Photo</span>
-          </label>
-          <input
-            type="file"
-            {...register("coverPhoto", {
-              required: "Cover Photo is Required",
-            })}
-            className="file-input file-input-bordered file-input-secondary w-full max-w-xs"
-          />
-          {errors.coverPhoto && (
-            <p className="text-red-500">{errors.coverPhoto.message}</p>
-          )}
-        </div>
-        <div>
-          <label className="label">
-            <span className="label-text">Description</span>
-          </label>
-          <textarea
-            {...register("description", {
-              required: "Description is Required",
-            })}
-            className="textarea textarea-bordered h-44 my-4 w-full"
-          ></textarea>
-          {errors.description && (
-            <p className="text-red-500">{errors.description.message}</p>
-          )}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          <div>
+            <label className="label">
+              <span className="label-text">Distance</span>
+            </label>
+            <input
+              {...register("distance", {
+                required: "Distance is Required",
+              })}
+              type="text"
+              className="input input-ghost w-full  input-bordered"
+            />
+            {errors.distance && (
+              <p className="text-red-500">{errors.distance.message}</p>
+            )}
+          </div>
+
+          <div className="w-full">
+            <label className="label">
+              <span className="label-text">Cover Photo</span>
+            </label>
+            <input
+              type="file"
+              {...register("image", {
+                required: "Cover Photo is Required",
+              })}
+              className="file-input file-input-bordered file-input-secondary w-full max-w-xs"
+            />
+            {errors.image && (
+              <p className="text-red-500">{errors.image.message}</p>
+            )}
+          </div>
+          <div>
+            <label className="label">
+              <span className="label-text">Description</span>
+            </label>
+            <textarea
+              {...register("description", {
+                required: "Description is Required",
+              })}
+              className="textarea textarea-bordered h-44 my-3 w-full"
+            ></textarea>
+            {errors.description && (
+              <p className="text-red-500">{errors.description.message}</p>
+            )}
+          </div>
         </div>
 
         <input
-          className="btn btn-primary btn-outline w-full hover:rounded-full"
+          className="btn btn-primary btn-outline w-full hover:rounded-full mx-auto"
           type="submit"
           value="Add Spot"
         />
@@ -284,8 +222,3 @@ const AddSpot = () => {
 };
 
 export default AddSpot;
-
-
-
-
-
