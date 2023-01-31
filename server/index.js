@@ -27,11 +27,10 @@ async function run() {
     console.log("database connected successfully");
 
     const database = client.db("onlineTouristGuide");
-    const touristCollection = database.collection("touristServices");
     const divisionCollection = database.collection("divisionCategory");
     const spotCollection = database.collection("touristSpot");
     const bookingCollection = database.collection("booking");
-    const reviewCollection = database.collection("review");
+
 
     // Add Division API
     app.post("/add-division", async (req, res) => {
@@ -75,6 +74,20 @@ async function run() {
       res.send(result);
     });
 
+    app.get("/all-spot", async (req, res) => {
+      const query = {};
+      const result = await spotCollection.find(query).toArray();
+      res.send(result);
+    });
+
+    app.get("/booking/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = {_id:ObjectId(id)};
+      const result = await spotCollection.findOne(query);
+      res.send(result);
+    });
+
+
     // Manage spot GET requests
     app.get("/division/:id", async (req, res) => {
       const  id = req.params.id;
@@ -83,31 +96,6 @@ async function run() {
       res.send(result);
     });
 
-    // GET Services API
-    app.get("/services", async (req, res) => {
-      const cursor = touristCollection.find({});
-      const services = await cursor.toArray();
-      res.send(services);
-    });
-
-    // POST API
-    app.post("/add-services", async (req, res) => {
-      const product = req.body;
-      console.log("hitting the post api", product);
-
-      const result = await touristCollection.insertOne(product);
-      console.log(result);
-      res.json(result);
-    });
-
-    //single services
-    app.get("/services/:id", async (req, res) => {
-      const id = req.params.id;
-      const query = { _id: ObjectId(id) };
-      const service = await touristCollection.findOne(query);
-      res.send(service);
-      // console.log(service);
-    });
 
     // POST booking
     app.post("/booking", async (req, res) => {
@@ -119,7 +107,6 @@ async function run() {
     });
 
     // My booking
-
     app.get("/my-booking/:email", async (req, res) => {
       const email = req.params.email;
       const query = { email: email };
@@ -142,20 +129,8 @@ async function run() {
       res.send(result);
     });
 
-    // post API for reviews
-    app.post("/reviews", async (req, res) => {
-      const review = req.body;
-      console.log(review);
-      const result = await reviewCollection.insertOne(review);
-      console.log(result);
-      res.json(result);
-    });
 
-    // get API for reviews
-    app.get("/reviews", async (req, res) => {
-      const allReview = await reviewCollection.find({}).toArray();
-      res.send(allReview);
-    });
+
   } finally {
     // await client.close();
   }

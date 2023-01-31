@@ -1,9 +1,8 @@
 import React from "react";
-// import { Card, Col, Row } from 'react-bootstrap';
 import { Link } from "react-router-dom";
-import "./ServiceDetails.css";
 
-const ServiceDetails = ({ service }) => {
+
+const SingleServiceDetails = ({ service }) => {
   console.log(service);
   const { _id, image, district, spotName, description, duration, cost , distance } =
     service;
@@ -43,4 +42,4 @@ const ServiceDetails = ({ service }) => {
   );
 };
 
-export default ServiceDetails;
+export default SingleServiceDetails;

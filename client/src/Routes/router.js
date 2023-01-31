@@ -8,14 +8,6 @@ import NotFound from "../Components/NotFound/NotFound";
 import PrivateRoute from "./PrivateRoute";
 import DreamDestination from "../Components/DreamDestination/DreamDestination";
 import OurServices from "../Components/OurServices/OurServices";
-import DhakaService from "../Components/All District Details/DhakaService";
-import BarisalService from "../Components/All District Details/BarisalService";
-import SylhetService from "../Components/All District Details/SylhetService";
-import ChittagongService from "../Components/All District Details/ChittagongService";
-import MymensinghService from "../Components/All District Details/MymensinghService";
-import KhulnaService from "../Components/All District Details/KhulnaService";
-import RangpurService from "../Components/All District Details/RangpurService";
-import RajshahiService from "../Components/All District Details/RajshahiService";
 import Contact from "../Components/ContactUs/Contact";
 import OurBlogs from "../Components/OurBlogs/OurBlogs";
 import Login from "../Pages/Login/Login";
@@ -62,38 +54,6 @@ const router = createBrowserRouter([
         fetch(`${process.env.REACT_APP_API_URL}/division/${params.id}`)
       },
       {
-        path: "/dhaka-division",
-        element: <DhakaService/>,
-      },
-      {
-        path: "/barisal-division",
-        element: <BarisalService/>,
-      },
-      {
-        path: "/sylhet-division",
-        element: <SylhetService/>,
-      },
-      {
-        path: "/chittagong-division",
-        element: <ChittagongService/>,
-      },
-      {
-        path: "//mymensingh-division",
-        element: <MymensinghService/>,
-      },
-      {
-        path: "/khulna-division",
-        element: <KhulnaService/>,
-      },
-      {
-        path: "/rangpur-division",
-        element: <RangpurService/>,
-      },
-      {
-        path: "/rajshahi-division",
-        element: <RajshahiService/>,
-      },
-      {
         path: "/contact",
         element: <Contact/>,
       },
@@ -125,6 +85,8 @@ const router = createBrowserRouter([
             <Booking/>
           </PrivateRoute>
         ),
+        loader: ({params})=>
+          fetch(`${process.env.REACT_APP_API_URL}/booking/${params.id}`)
         },
     ],
   },
