@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const { MongoClient, ServerApiVersion } = require("mongodb");
+var jwt = require("jsonwebtoken");
 const ObjectId = require("mongodb").ObjectId;
 
 const app = express();
@@ -30,10 +31,30 @@ async function run() {
     const divisionCollection = database.collection("divisionCategory");
     const spotCollection = database.collection("touristSpot");
     const bookingCollection = database.collection("booking");
+    const userCollection = database.collection("users");
+
+
+    // users Database
+
+    app.put("/user/:email" , async (req, res) => { 
+      const email = req.params.email;
+      const user = req.body;
+      const filter = {email : email};
+      const options = {upsert : true}
+      const updateDoc ={
+        $set : user,
+      }
+      const result = await userCollection.updateOne(filter,updateDoc,options)
+      console.log(result);
+
+      const token = jwt.sign(user,process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1d' })
+      res.send ({result,token})
+    })
+
 
 
     // Add Division API
-    app.post("/add-division", async (req, res) => {
+    app.post("/add-division", async (req, res) => { 
       const division = req.body;
       //   console.log("Check division", division);
       const result = await divisionCollection.insertOne(division);
