@@ -1,11 +1,10 @@
 import React from "react";
 import { NavLink, Outlet } from "react-router-dom";
-import Header from "../Components/Header/Header";
+
 
 const DashboardLayout = () => {
   return (
     <div>
-      <Header />
       <div className="drawer drawer-mobile">
         <input
           id="dashboard-drawer"

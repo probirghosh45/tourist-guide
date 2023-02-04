@@ -5,7 +5,7 @@ import './OurServices.css';
 
 const OurServices = () => {
     const [services, setServices]= useState([])
-    console.log(services)
+    // console.log("services",services)
 
     useEffect(() => {
         fetch(`${process.env.REACT_APP_API_URL}/division`)

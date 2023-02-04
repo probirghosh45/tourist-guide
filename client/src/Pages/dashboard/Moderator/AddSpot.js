@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useForm } from "react-hook-form";
 import Loading from "../../shared/Loading";
 import { useNavigate } from "react-router-dom";
-import { toast } from "react-toastify";
+import toast from 'react-hot-toast'
 import useTitle from "../../../hooks/useTitle";
 import { AuthContext } from "../../../Contexts/AuthProvider/AuthProvider";
 

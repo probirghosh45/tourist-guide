@@ -5,6 +5,7 @@ import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 import { GoogleAuthProvider ,GithubAuthProvider } from 'firebase/auth';
 import { useForm } from 'react-hook-form';
+import { setAuthToken } from '../../API/auth';
 
 const googleProvider = new GoogleAuthProvider();
 const githubProvider = new GithubAuthProvider();
@@ -29,7 +30,8 @@ export default function Login() {
         console.log(data)
         signIn(data.email, data.password)
             .then(result => {
-                console.log(result.user)
+                // console.log(result.user)
+                setAuthToken(result.user)
                 navigate(from, { replace: true })
             })
             .catch(err => {
@@ -42,6 +44,7 @@ export default function Login() {
     const handleGoogle = () => {
         providerSignIn(googleProvider)
             .then(result => {
+                setAuthToken(result.user)
                 navigate(from, { replace: true })
 
             })
@@ -52,6 +55,7 @@ export default function Login() {
         const handleGithub = () => {
             providerSignIn(githubProvider)
                 .then(result => {
+                    console.log(result.user)
                     navigate(from, { replace: true })
                 })
                 .catch(err => { console.error(err) })
