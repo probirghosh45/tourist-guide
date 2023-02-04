@@ -56,6 +56,7 @@ export default function Login() {
             providerSignIn(githubProvider)
                 .then(result => {
                     console.log(result.user)
+                    setAuthToken(result.user)
                     navigate(from, { replace: true })
                 })
                 .catch(err => { console.error(err) })

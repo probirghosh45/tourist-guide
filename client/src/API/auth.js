@@ -12,5 +12,8 @@ export const setAuthToken = (user) => {
     },
   })
     .then((response) => response.json())
-    .then((data) => console.log(data));
+    .then((data) => {
+      console.log(data);
+      localStorage.setItem("tourist-guide", data.token);
+    });
 };

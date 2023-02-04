@@ -2,6 +2,7 @@ import React, { useContext, useState } from 'react'
 import { useForm } from 'react-hook-form';
 import { FaSpinner } from 'react-icons/fa';
 import { Link, Navigate, useLocation, useNavigate } from 'react-router-dom';
+import { setAuthToken } from '../../API/auth';
 import { AuthContext } from '../../Contexts/AuthProvider/AuthProvider';
 
 export default function Register() {
@@ -38,7 +39,9 @@ export default function Register() {
 
         createUser(data.email, data.password)
             .then(res => {
-                const usr = res.usr;
+                // const user = res.usr;
+                // console.log(user);
+                setAuthToken(res.user)
                 // set display name and photo url
                 setProfileInfo(data.fullName, data.photoUrl);
 

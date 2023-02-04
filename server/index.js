@@ -51,7 +51,12 @@ async function run() {
       res.send ({result,token})
     })
 
+   app.get("/user",async(req,res) => {
+    const query={}
+    const result = await userCollection.find(query).toArray()
+    res.send(result)
 
+   })
 
     // Add Division API
     app.post("/add-division", async (req, res) => { 
@@ -59,13 +64,13 @@ async function run() {
       //   console.log("Check division", division);
       const result = await divisionCollection.insertOne(division);
       console.log(result);
-      res.json(result);
+      res.send(result);
     });
 
     app.get("/division", async (req, res) => {
       const query = {};
       const result = await divisionCollection.find(query).toArray();
-      res.json(result);
+      res.send(result);
     });
 
     app.get("/add-spot-division-wise", async (req, res) => {
