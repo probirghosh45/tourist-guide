@@ -45,7 +45,7 @@ async function run() {
         $set : user,
       }
       const result = await userCollection.updateOne(filter,updateDoc,options)
-      // console.log(result);
+      console.log(result);
 
       const token = jwt.sign(user,process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1d' })
       res.send ({result,token})
@@ -54,6 +54,14 @@ async function run() {
    app.get("/user",async(req,res) => {
     const query={}
     const result = await userCollection.find(query).toArray()
+    res.send(result)
+
+   })
+
+   app.get("/user/:email",async(req,res) => {
+    const email= req.params.email
+    const query = {email: email}
+    const result = await userCollection.findOne(query)
     res.send(result)
 
    })
