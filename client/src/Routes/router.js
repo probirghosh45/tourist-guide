@@ -27,6 +27,8 @@ import TourPackages from "../Components/TourPackages/TourPackages";
 import SingleService from "../Components/SingleService/SingleService";
 import MyReview from "../Pages/dashboard/Users/MyReview";
 import AllReview from "../Pages/dashboard/Moderator/AllReview";
+import Welcome from "../Components/Dashboard/Welcome";
+import BecomeAModerator from "../Pages/dashboard/Users/BecomeAModerator";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -43,120 +45,136 @@ const router = createBrowserRouter([
       },
       {
         path: "/dreamDestination",
-        element: <DreamDestination/>,
+        element: <DreamDestination />,
       },
       {
         path: "/services",
-        element: <OurServices/>,
+        element: <OurServices />,
       },
       {
         path: "/division/:id",
-        element: <SingleService/>,
-        loader : ({params})=>
-        fetch(`${process.env.REACT_APP_API_URL}/division/${params.id}`)
+        element: <SingleService />,
+        loader: ({ params }) =>
+          fetch(`${process.env.REACT_APP_API_URL}/division/${params.id}`),
       },
       {
         path: "/contact",
-        element: <Contact/>,
+        element: <Contact />,
       },
       {
         path: "/blogs",
-        element: <OurBlogs/>,
+        element: <OurBlogs />,
       },
       {
         path: "/tour-package",
-        element: <TourPackages/>,
+        element: <TourPackages />,
       },
       {
         path: "/login",
-        element: <Login/>,
+        element: <Login />,
       },
       {
         path: "/register",
-        element: <Register/>,
+        element: <Register />,
       },
       {
         path: "/about",
-        element: <About/>,
+        element: <About />,
       },
-      
+
       {
         path: "/booking/:id",
         element: (
           <PrivateRoute>
-            <Booking/>
+            <Booking />
           </PrivateRoute>
         ),
-        loader: ({params})=>
-          fetch(`${process.env.REACT_APP_API_URL}/booking/${params.id}`)
-        },
+        loader: ({ params }) =>
+          fetch(`${process.env.REACT_APP_API_URL}/booking/${params.id}`),
+      },
     ],
   },
 
   {
     path: "/dashboard",
-    element: 
+    element: (
       <PrivateRoute>
         <DashboardLayout />
       </PrivateRoute>
-  ,
-  errorElement: <NotFound />,
-  children: [
+    ),
+    errorElement: <NotFound />,
+    children: [
+      {
+        path: "",
+        element: <Welcome />,
+      },
+      {
+        path: "become-a-moderator",
+        element: (
+          <PrivateRoute>
+            <BecomeAModerator />
+          </PrivateRoute>
+        ),
+      },
       {
         path: "/dashboard/add-division",
-        element: <AddDivision/>,
+        element: <AddDivision />,
       },
       {
         path: "/dashboard/manage-division",
-        element: <ManageDivision/>,
+        element: <ManageDivision />,
       },
       {
         path: "/dashboard/add-spot",
-        element: <AddSpot/>,
+        element: (
+          <PrivateRoute>
+            <AddSpot />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/dashboard/manage-spot",
-        element: <ManageSpot/>,
+        element: (
+          <PrivateRoute>
+            <ManageSpot />
+          </PrivateRoute>
+        ),
       },
       {
-        path: "/dashboard/my-booking",
-        element: <MyBooking/>,
+        path: "/dashboard/my-bookings",
+        element: (
+          <PrivateRoute>
+            <MyBooking />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/dashboard/manage-booking",
-        element: <ManageBooking/>,
+        element: <ManageBooking />,
       },
       {
         path: "/dashboard/wishlist",
-        element: <Wishlist/>,
+        element: <Wishlist />,
       },
       {
         path: "/dashboard/report",
-        element: <Report/>,
+        element: <Report />,
       },
       {
         path: "/dashboard/manage-users",
-        element: (
-            <ManageUsers/>
-        ),
+        element: <ManageUsers />,
       },
       {
         path: "/dashboard/manage-moderator",
-        element: (
-            <AllModerator />
-        ),
+        element: <AllModerator />,
       },
       {
         path: "/dashboard/my-review",
-        element: (
-            <MyReview/>
-        ),
+        element: <MyReview />,
       },
       {
         path: "/dashboard/all-review",
-        element: (
-            <AllReview/>
-        ),
+        element: <AllReview />,
       },
     ],
   },

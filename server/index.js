@@ -45,7 +45,7 @@ async function run() {
         $set : user,
       }
       const result = await userCollection.updateOne(filter,updateDoc,options)
-      console.log(result);
+      // console.log(result);
 
       const token = jwt.sign(user,process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1d' })
       res.send ({result,token})
@@ -63,7 +63,7 @@ async function run() {
       const division = req.body;
       //   console.log("Check division", division);
       const result = await divisionCollection.insertOne(division);
-      console.log(result);
+      // console.log(result);
       res.send(result);
     });
 
@@ -86,7 +86,7 @@ async function run() {
     // Add spot POST requests
     app.post("/add-spot", async (req, res) => {
       const spot = req.body;
-      console.log("Add Spot API", spot);
+      // console.log("Add Spot API", spot);
       const result = await spotCollection.insertOne(spot);
       console.log(result);
       // res.json(result);
@@ -126,7 +126,7 @@ async function run() {
     // POST booking
     app.post("/booking", async (req, res) => {
       const query = req.body;
-      console.log(query);
+      // console.log(query);
       const result = await bookingCollection.insertOne(query);
       // console.log(result);
       res.send(result);
