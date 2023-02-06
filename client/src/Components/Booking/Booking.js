@@ -9,6 +9,8 @@ const Booking = () => {
   const booking = useLoaderData();
   const [reviews, setReviews] = useState([]);
   const { user } = useContext(AuthContext);
+  const stamp = new Date().getTime()
+
 
   const handleReview = (e) => {
     e.preventDefault();
@@ -21,6 +23,7 @@ const Booking = () => {
       reviewerName: user?.displayName,
       reviewerMail: user?.email,
       reviewerPhotoUrl: user?.photoURL,
+      timeStamp: stamp
     };
 
     // sending the data to server

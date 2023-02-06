@@ -29,6 +29,7 @@ import MyReview from "../Pages/dashboard/Users/MyReview";
 import AllReview from "../Pages/dashboard/Moderator/AllReview";
 import Welcome from "../Components/Dashboard/Welcome";
 import BecomeAModerator from "../Pages/dashboard/Users/BecomeAModerator";
+import MyReviewEdit from "../Components/Review/MyReviewEdit";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -150,28 +151,60 @@ const router = createBrowserRouter([
       },
       {
         path: "manage-booking",
-        element: <ManageBooking />,
+        element: (
+          <PrivateRoute>
+            <ManageBooking />
+          </PrivateRoute>
+        ),
       },
       {
         path: "wishlist",
-        element: <Wishlist />,
+        element: (
+          <PrivateRoute>
+            <Wishlist />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/dashboard/report",
-        element: <Report />,
+        element: (
+          <PrivateRoute>
+            <Report />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/dashboard/manage-users",
-        element: <ManageUsers />,
+        element: (
+          <PrivateRoute>
+            <ManageUsers />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/dashboard/manage-moderator",
-        element: <AllModerator />,
+        element: (
+          <PrivateRoute>
+            <AllModerator />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/dashboard/my-review",
-        element: <MyReview />,
+        element: (
+          <PrivateRoute>
+            <MyReview />
+          </PrivateRoute>
+        ),
       },
+      // {
+      //   path: "/dashboard/reviews/edit/:id",
+      //   element: (
+      //     <PrivateRoute>
+      //       <MyReviewEdit />
+      //     </PrivateRoute>
+      //   ),
+      // },
       {
         path: "/dashboard/all-review",
         element: <AllReview />,

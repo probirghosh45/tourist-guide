@@ -34,41 +34,40 @@ async function run() {
     const userCollection = database.collection("users");
     const reviewCollection = database.collection("reviews");
 
-
     // users Database
 
-    app.put("/user/:email" , async (req, res) => { 
+    app.put("/user/:email", async (req, res) => {
       const email = req.params.email;
       const user = req.body;
-      const filter = {email : email};
-      const options = {upsert : true}
-      const updateDoc ={
-        $set : user,
-      }
-      const result = await userCollection.updateOne(filter,updateDoc,options)
+      const filter = { email: email };
+      const options = { upsert: true };
+      const updateDoc = {
+        $set: user,
+      };
+      const result = await userCollection.updateOne(filter, updateDoc, options);
       console.log(result);
 
-      const token = jwt.sign(user,process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1d' })
-      res.send ({result,token})
-    })
+      const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, {
+        expiresIn: "1d",
+      });
+      res.send({ result, token });
+    });
 
-   app.get("/users",async(req,res) => {
-    const query={}
-    const result = await userCollection.find(query).toArray()
-    res.send(result)
+    app.get("/users", async (req, res) => {
+      const query = {};
+      const result = await userCollection.find(query).toArray();
+      res.send(result);
+    });
 
-   })
-
-   app.get("/user/:email",async(req,res) => {
-    const email= req.params.email
-    const query = {email: email}
-    const result = await userCollection.findOne(query)
-    res.send(result)
-
-   })
+    app.get("/user/:email", async (req, res) => {
+      const email = req.params.email;
+      const query = { email: email };
+      const result = await userCollection.findOne(query);
+      res.send(result);
+    });
 
     // Add Division API
-    app.post("/add-division", async (req, res) => { 
+    app.post("/add-division", async (req, res) => {
       const division = req.body;
       //   console.log("Check division", division);
       const result = await divisionCollection.insertOne(division);
@@ -115,22 +114,27 @@ async function run() {
       res.send(result);
     });
 
-    app.get("/booking/:id", async (req, res) => {
+    app.get("/spot/:id", async (req, res) => {
       const id = req.params.id;
-      const query = {_id:ObjectId(id)};
+      const query = { _id: ObjectId(id) };
       const result = await spotCollection.findOne(query);
       res.send(result);
     });
 
-
-    // Manage spot GET requests
-    app.get("/division/:id", async (req, res) => {
-      const  id = req.params.id;
-      const query = {division : id};
-      const result = await spotCollection.find(query).toArray();
+    app.get("/booking/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) };
+      const result = await spotCollection.findOne(query);
       res.send(result);
     });
 
+    // Manage spot GET requests
+    app.get("/division/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { division: id };
+      const result = await spotCollection.find(query).toArray();
+      res.send(result);
+    });
 
     // POST booking
     app.post("/booking", async (req, res) => {
@@ -164,43 +168,57 @@ async function run() {
       res.send(result);
     });
 
+    // reviews API
 
-        // reviews API
-        app.get('/reviews/', async (req, res) => {
+    app.post("/reviews", async (req, res) => {
+      const review = req.body;
+      // console.log(review);
+      const result = await reviewCollection.insertOne(review);
+      // console.log(result);
+      res.send(result);
+    });
 
-          let query = {}
-          if (req.query.reviewerMail) {
-              query = {
-                reviewerMail: req.query.reviewerMail
-              }
-          }
+    app.get("/reviews", async (req, res) => {
+      let query = {};
+      if (req.query.reviewerMail) {
+        query = {
+          reviewerMail: req.query.reviewerMail,
+        };
+      }
 
-          if (req.query.sid) {
-              query = {
-                  sid: req.query.sid
-              }
-          }
+      if (req.query.sid) {
+        query = {
+          sid: req.query.sid,
+        };
+      }
 
-          const cursor = reviewCollection.find(query);
-          const result = await cursor.toArray();
-          res.send(result);
+      const cursor = reviewCollection.find(query);
+      const result = await cursor.toArray();
+      res.send(result);
+    });
 
-      });
+    app.get("/reviews/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) };
+      const result = await reviewCollection.findOne(query);
+      res.send(result);
+    });
 
+    // app.patch("/reviews/:id", async (req, res) => {
+    //   const id = req.params.id;
+    //   const result = await reviewCollection.updateOne(
+    //     { _id: ObjectId(id) },
+    //     { $set: req.body }
+    //   );
+    //   res.send(result);
+    // });
 
-      app.post('/reviews', async (req, res) => {
-          const review = req.body;
-          // console.log(review);
-          const result = await reviewCollection.insertOne(review);
-          // console.log(result);
-          res.send(result);
-      });
-
-
-
-
-
-
+    app.delete("/reviews/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) };
+      const result = await reviewCollection.deleteOne(query);
+      res.send(result);
+    });
   } finally {
     // await client.close();
   }
