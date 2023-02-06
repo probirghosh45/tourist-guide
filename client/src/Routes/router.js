@@ -117,15 +117,15 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/dashboard/add-division",
+        path: "add-division",
         element: <AddDivision />,
       },
       {
-        path: "/dashboard/manage-division",
+        path: "manage-division",
         element: <ManageDivision />,
       },
       {
-        path: "/dashboard/add-spot",
+        path: "add-spot",
         element: (
           <PrivateRoute>
             <AddSpot />
@@ -133,7 +133,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/dashboard/manage-spot",
+        path: "manage-spot",
         element: (
           <PrivateRoute>
             <ManageSpot />
@@ -149,11 +149,11 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/dashboard/manage-booking",
+        path: "manage-booking",
         element: <ManageBooking />,
       },
       {
-        path: "/dashboard/wishlist",
+        path: "wishlist",
         element: <Wishlist />,
       },
       {
@@ -162,7 +162,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/dashboard/manage-users",
-        element: <ManageUsers />,
+        element: <manage-users />,
       },
       {
         path: "/dashboard/manage-moderator",

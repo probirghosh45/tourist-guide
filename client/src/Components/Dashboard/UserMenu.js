@@ -8,7 +8,7 @@ const UserMenu = () => {
       <NavLink
         to='my-bookings'
         className={({ isActive }) =>
-          `flex items-center px-4 py-3 transition-colors duration-300 transform  hover:bg-gray-300   hover:text-gray-700 ${
+          `flex items-center px-4 py-2 mt-3 transition-colors duration-300 transform  hover:bg-gray-300   hover:text-gray-700 ${
             isActive ? 'bg-gray-300  text-gray-700' : 'text-gray-600'
           }`
         }
@@ -17,11 +17,34 @@ const UserMenu = () => {
 
         <span className='mx-4 font-medium'>My Bookings</span>
       </NavLink>
+      <NavLink
+        to='wishlist'
+        className={({ isActive }) =>
+          `flex items-center px-4 py-2 mt-3 transition-colors duration-300 transform  hover:bg-gray-300   hover:text-gray-700 ${
+            isActive ? 'bg-gray-300  text-gray-700' : 'text-gray-600'
+          }`
+        }
+      >
+        <FingerPrintIcon className='w-5 h-5' />
 
+        <span className='mx-4 font-medium'>Wishlist</span>
+      </NavLink>
+      <NavLink
+        to='my-review'
+        className={({ isActive }) =>
+          `flex items-center px-4 py-2 mt-3 transition-colors duration-300 transform  hover:bg-gray-300   hover:text-gray-700 ${
+            isActive ? 'bg-gray-300  text-gray-700' : 'text-gray-600'
+          }`
+        }
+      >
+        <FingerPrintIcon className='w-5 h-5' />
+
+        <span className='mx-4 font-medium'>My Review</span>
+      </NavLink>
       <NavLink
         to='become-a-moderator'
         className={({ isActive }) =>
-          `flex items-center px-4 py-3 transition-colors duration-300 transform  hover:bg-gray-300   hover:text-gray-700 ${
+          `flex items-center px-4 py-2 mt-3 transition-colors duration-300 transform  hover:bg-gray-300   hover:text-gray-700 ${
             isActive ? 'bg-gray-300  text-gray-700' : 'text-gray-600'
           }`
         }

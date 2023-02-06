@@ -45,7 +45,6 @@ const BecomeAModerator = () => {
       ) : (
         <>{!loading && <BecomeModeratorForm handleSubmit={handleSubmit} />}</>
       )}
-      {/* <BecomeModeratorForm handleSubmit={handleSubmit} /> */}
     </>
   );
 };
