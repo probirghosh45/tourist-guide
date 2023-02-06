@@ -32,6 +32,7 @@ async function run() {
     const spotCollection = database.collection("touristSpot");
     const bookingCollection = database.collection("booking");
     const userCollection = database.collection("users");
+    const reviewCollection = database.collection("reviews");
 
 
     // users Database
@@ -162,6 +163,41 @@ async function run() {
       const result = await bookingCollection.deleteOne(query);
       res.send(result);
     });
+
+
+        // reviews API
+        app.get('/reviews/', async (req, res) => {
+
+          let query = {}
+          if (req.query.reviewerMail) {
+              query = {
+                reviewerMail: req.query.reviewerMail
+              }
+          }
+
+          if (req.query.sid) {
+              query = {
+                  sid: req.query.sid
+              }
+          }
+
+          const cursor = reviewCollection.find(query);
+          const result = await cursor.toArray();
+          res.send(result);
+
+      });
+
+
+      app.post('/reviews', async (req, res) => {
+          const review = req.body;
+          // console.log(review);
+          const result = await reviewCollection.insertOne(review);
+          // console.log(result);
+          res.send(result);
+      });
+
+
+
 
 
 
