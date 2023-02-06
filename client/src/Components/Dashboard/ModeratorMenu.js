@@ -30,7 +30,7 @@ const ModeratorMenu = () => {
 
         <span className='mx-4 font-medium'>Manage Spot</span>
       </NavLink>
-      <NavLink
+      {/* <NavLink
         to='manage-users'
         className={({ isActive }) =>
           `flex items-center px-4 py-2 mt-3  transition-colors duration-300 transform  hover:bg-gray-300   hover:text-gray-700 ${
@@ -40,8 +40,8 @@ const ModeratorMenu = () => {
       >
         <FingerPrintIcon className='w-5 h-5' />
 
-        <span className='mx-4 font-medium'>Manage Users</span>
-      </NavLink>
+        <span className='mx-4 font-medium'>Users Info</span>
+      </NavLink> */}
 
       <NavLink
         to='manage-booking'

@@ -31,6 +31,18 @@ const AdminMenu = () => {
         <span className='mx-4 font-medium'>Manage Division</span>
       </NavLink>
       <NavLink
+        to='manage-users'
+        className={({ isActive }) =>
+          `flex items-center px-4 py-2 mt-3  transition-colors duration-300 transform  hover:bg-gray-300   hover:text-gray-700 ${
+            isActive ? 'bg-gray-300  text-gray-700' : 'text-gray-600'
+          }`
+        }
+      >
+        <UserPlusIcon className='w-5 h-5' />
+
+        <span className='mx-4 font-medium'>Manage Users</span>
+      </NavLink>
+      {/* <NavLink
         to='manage-moderator'
         className={({ isActive }) =>
           `flex items-center px-4 py-2 mt-3  transition-colors duration-300 transform  hover:bg-gray-300   hover:text-gray-700 ${
@@ -41,7 +53,7 @@ const AdminMenu = () => {
         <UserPlusIcon className='w-5 h-5' />
 
         <span className='mx-4 font-medium'>All Moderator</span>
-      </NavLink>
+      </NavLink> */}
       <NavLink
         to='report'
         className={({ isActive }) =>

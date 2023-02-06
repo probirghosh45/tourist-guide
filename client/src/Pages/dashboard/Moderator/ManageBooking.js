@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Table } from 'react-bootstrap';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 
 
@@ -39,43 +38,7 @@ const ManageBooking = () => {
   }
 
     return (
-//         <div>
-//         <h2 className='text-center py-5'>Manage Booking</h2>
-//         <Table striped bordered hover variant="dark">
-//         <thead>
-//         <tr>
-//   <th>SL No.</th>
-//   <th>Title</th>
-//   <th>User Name</th>
-//   <th>User Email</th>
-//   <th>Date</th>
-//   <th>Address</th>
-//   <th>Phone Number</th>
-//   <th>Price</th>
-//   <th>Action</th>
-// </tr>
-// </thead>
 
-// {booking.map((booking, index) => (
-//  <tbody>
-//  <tr>
-//    <td>{index+1}</td>
-//    <td>{booking.spotName}</td>
-//    <td>{booking.name}</td>
-//    <td>{booking.email}</td>
-//    <td>{booking.dateData}</td>
-//    <td>{booking.addressData}</td>
-//    <td>{booking.phoneNumber}</td>
-//    <td>{booking.cost}</td>
-//    <button onClick={() => handleDelete(booking._id)}>Delete</button>
-//  </tr>
-// </tbody>
-// )
-
-// )}
-
-// </Table>
-//     </div>
 <div className='container mx-auto px-4 sm:px-8'>
 <div className='py-8'>
   <div className='-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto'>

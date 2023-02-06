@@ -162,7 +162,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/dashboard/manage-users",
-        element: <manage-users />,
+        element: <ManageUsers />,
       },
       {
         path: "/dashboard/manage-moderator",
