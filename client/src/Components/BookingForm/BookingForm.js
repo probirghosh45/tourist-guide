@@ -1,5 +1,6 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { toast } from "react-hot-toast";
 import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
 
 import "./Booking.css";
@@ -8,6 +9,8 @@ const BookingForm = (props) => {
   const {spotName, cost } = props.booking;
   const { user } = useContext(AuthContext);
   // console.log(user);
+  // const [date,setDate] =useState()
+  // console.log("date",date);
 
   const { register, handleSubmit,formState:{errors} , reset } = useForm();
   
@@ -25,7 +28,7 @@ const BookingForm = (props) => {
       .then((res) => res.json())
       .then((data) => {
         if (data.insertedId) {
-          alert("Booking successfully");
+          toast.success("Booking Successful 🎉");
         }
         reset();
       });
@@ -54,7 +57,7 @@ const BookingForm = (props) => {
         />
         <input {...register("spotName")} type="text" readOnly defaultValue={spotName} />
         <input {...register("cost")} type="text" readOnly defaultValue={cost} />
-        <input {...register("dateData")} placeholder="Select Date" required />
+        <input {...register("dateData")} type="date"  placeholder="Select Date" required />
         {errors.dateData && (
             <p className="text-red-500">{errors.dateData.message}</p>
           )}
