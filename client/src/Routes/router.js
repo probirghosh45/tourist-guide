@@ -166,7 +166,7 @@ const router = createBrowserRouter([
           </PrivateRoute>
         ),
         loader: ({ params }) => 
-        fetch(`${process.env.REACT_APP_API_URL}/payment/${params.id}`),
+        fetch(`${process.env.REACT_APP_API_URL}/booking-payment/${params.id}`),
         },
       {
         path: "wishlist",

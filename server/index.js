@@ -34,6 +34,8 @@ async function run() {
     const bookingCollection = database.collection("booking");
     const userCollection = database.collection("users");
     const reviewCollection = database.collection("reviews");
+    const paymentCollection = client.db('ResaleCycle').collection('payments');
+
 
     // users Database
 
@@ -155,7 +157,7 @@ async function run() {
       res.send(result);
     });
 
-    app.get("/payment/:id", async (req, res) => {
+    app.get("/booking-payment/:id", async (req, res) => {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };
       const result = await bookingCollection.findOne(query);
@@ -248,6 +250,16 @@ async function run() {
     res.send({
         clientSecret: paymentIntent.client_secret,
     });
+});
+
+app.post('/payments',async (req,res) => {
+  const data = req.body;
+  const id = data.booking_id;
+  const booking = await bookingCollection.updateOne({ _id: ObjectId(id) },{ $set: { status: 'paid' } });
+  const result = await paymentCollection.insertOne(data);
+  console.log(result);
+  return res.send(result);
+
 });
 
   } finally {

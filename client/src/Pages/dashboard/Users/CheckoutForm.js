@@ -102,7 +102,7 @@ const CheckoutForm = ({data}) => {
             booking_id: _id,
             cost,
           };
-           fetch(`${process.env.REACT_APP_API_URL}/create-payment-intent`, {
+           fetch(`${process.env.REACT_APP_API_URL}/payments`, {
              method: "POST",
              headers: {
                "Content-Type": "application/json",
@@ -113,8 +113,7 @@ const CheckoutForm = ({data}) => {
              .then((data) => {
                console.log(data);
                setClientSecret(data.clientSecret);
-          
-              navigate("/my-orders"); 
+              navigate(`../my-bookings`); 
                toast.success("Payment Successful");
              })
              .catch((err) => {
