@@ -1,8 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext, useEffect, useState } from 'react';
-import { Table } from 'react-bootstrap';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 import useTitle from '../../../hooks/useTitle';
+import { Link } from 'react-router-dom';
 
 
 const MyBooking = () => {
@@ -111,12 +111,6 @@ const MyBooking = () => {
               scope='col'
               className='px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal'
             >
-              Price
-            </th>
-            <th
-              scope='col'
-              className='px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal'
-            >
               From
             </th>
             <th
@@ -124,6 +118,18 @@ const MyBooking = () => {
               className='px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal'
             >
               To
+            </th>
+            <th
+              scope='col'
+              className='px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal'
+            >
+              Price
+            </th>
+            <th
+              scope='col'
+              className='px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal'
+            >
+              Payment
             </th>
             <th
               scope='col'
@@ -159,21 +165,33 @@ const MyBooking = () => {
               <p className='text-gray-900 whitespace-no-wrap'>
               {booking.addressData}
               </p>
+            </td>             
+            <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+              <p className='text-gray-900 whitespace-no-wrap'>
+              {booking.dateData}
+              </p>
             </td>
-       
+            <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+              <p className='text-gray-900 whitespace-no-wrap'>
+              {booking.dateData}
+              </p>
+            </td>
             <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
               <p className='text-gray-900 whitespace-no-wrap'>${booking.cost}</p>
             </td>
-                 
             <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-              <p className='text-gray-900 whitespace-no-wrap'>
-              {booking.dateData}
-              </p>
-            </td>
-            <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-              <p className='text-gray-900 whitespace-no-wrap'>
-              {booking.dateData}
-              </p>
+             
+              {booking?.status === "paid" ? (
+                    <Link className="btn btn-success">PAID</Link>
+                  ) : (
+                    <Link
+                      className="btn btn-warning"
+                      to={`../checkout/${booking._id}`}
+                    >
+                      PAY
+                    </Link>
+                  )}
+              
             </td>
             <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
               <span className='relative inline-block px-3 py-1 font-semibold text-green-900 leading-tight'>
