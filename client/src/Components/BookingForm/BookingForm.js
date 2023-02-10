@@ -57,7 +57,7 @@ const BookingForm = (props) => {
         />
         <input {...register("spotName")} type="text" readOnly defaultValue={spotName} />
         <input {...register("cost")} type="text" readOnly defaultValue={cost} />
-        <input {...register("dateData")} type="date"  placeholder="Select Date" required />
+        <input {...register("dateData")} type="date" required />
         {errors.dateData && (
             <p className="text-red-500">{errors.dateData.message}</p>
           )}
