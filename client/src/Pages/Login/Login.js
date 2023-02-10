@@ -97,7 +97,7 @@ export default function Login() {
                     </form>
 
                     <div>
-                        <small className='mt-2'>Don't have an account? <span className='text-red-400 hover:drop-shadow-lg hover:text-red-500'> <Link to='/register' state={{ from2: from }} replace> Register Here </Link> </span></small>
+                        <small className='mt-2'>Don't have an account? <span className='text-red-400 hover:drop-shadow-lg hover:text-red-500'> <Link to='/register' style={{ textDecoration: 'none' }} state={{ from2: from }} replace> Register Here </Link> </span></small>
 
                         {/* google button */}
                         <button onClick={handleGoogle} className='border w-full p-2 mt-8 rounded hover:shadow-md shadow-green-400 drop-shadow text-slate-400 font-bold '>
