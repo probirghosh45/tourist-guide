@@ -17,7 +17,7 @@ const Service = ({ service }) => {
             {description}
           </p>
         </div>
-        <Link to={`/division/${_id}`}>
+        <Link to={`/division/${_id}`} style={{ textDecoration: 'none' }} >
           <div className="row justify-content-center">
             <button className="btn btn-success text-white px-4 w-75 rounded-0 order-btn ">
               {" "}

@@ -191,7 +191,7 @@ export default function Register() {
               Already have an account?{" "}
               <span className="text-red-400 hover:drop-shadow-lg hover:text-red-500">
                 {" "}
-                <Link to="/login" state={{ from: from2 }}>
+                <Link to="/login" style={{ textDecoration: 'none' }} state={{ from: from2 }}>
                   {" "}
                   Log In Here{" "}
                 </Link>{" "}

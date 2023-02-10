@@ -29,7 +29,7 @@ const SingleServiceDetails = ({ service }) => {
             </h5>
           </div>
 
-          <Link to={`/booking/${_id}`}>
+          <Link to={`/booking/${_id}`} style={{ textDecoration: 'none' }}>
             <div className="row justify-content-center">
             <button className="btn btn-success text-white px-4 w-75 rounded-0 order-btn ">
               Book Now

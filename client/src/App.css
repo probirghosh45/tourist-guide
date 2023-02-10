@@ -54,3 +54,16 @@
   width: 100%;
   height: 300px;
 }
+
+.linkStyle  {
+  margin: 2px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 8px;
+  background: gray;
+  width: 200px;
+  font-size: 15px;
+  color: black;
+  display: block;
+  text-decoration: none; 
+};

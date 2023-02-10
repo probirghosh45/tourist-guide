@@ -89,7 +89,7 @@ const Booking = () => {
             <div className="flex md:flex-row flex-col items-center">
               <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
                 <div className="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col">
-                  <a className="inline-flex items-center mr-10" href="/">
+                  <a className="inline-flex items-center mr-10" href="/" style={{ textDecoration: 'none' }}>
                     <img
                       alt="user"
                       src={
@@ -141,11 +141,10 @@ const Booking = () => {
                                     <div className="-my-8 divide-y-2 divide-gray-100">
                                         <div className="p-8 flex flex-wrap md:flex-nowrap">
                                             <div className="md:w-64 md:mb-0 mb-6 mr-20 flex-shrink-0 flex flex-col">
-                                                <a className="inline-flex items-center" href="/" >
+                                                <a className="inline-flex items-center" href="/" style={{ textDecoration: 'none' }} >
                                                     <img alt="user" src={review ? review?.reviewerPhotoUrl : `https://i.ibb.co/G9jFD5Q/male-avatar-profile-icon-of-smiling-caucasian-man-vector.jpg`} className="w-12 h-12 rounded-full flex-shrink-0 object-cover object-center" />
                                                     <span className="flex-grow flex flex-col pl-4">
-                                                        <span className="title-font font-medium text-gray-900">{review ? review?.reviewerName : "Anonymous User"}</span>
-                                                        <span className="mt-1 text-gray-500 text-sm">{review?.rmail}</span>
+                                                        <span className="title-font font-medium text-gray-900" >{review ? review?.reviewerName : "Anonymous User"}</span>
                                                     </span>
                                                 </a>
                                             </div>

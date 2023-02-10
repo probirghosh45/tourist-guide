@@ -24,7 +24,7 @@ const TourPackage = ({ tourpackage }) => {
             {time} <br /> <span>{taka}</span>
           </h5>
         </div>
-        <Link>
+        <Link style={{ textDecoration: 'none' }}>
           <div className="google-btn">
             <button className=" google-btn btn animate__animated animate__fadeInUp">
               Book Now

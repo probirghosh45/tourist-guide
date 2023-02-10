@@ -24,7 +24,7 @@ const Sidebar = ({ role, loading }) => {
       <div className="bg-gray-100 text-gray-800 flex justify-between md:hidden">
         <div>
           <div className="block cursor-pointer p-4 font-bold">
-            <Link to="/">Tourist Guide</Link>
+            <Link to="/" style={{ textDecoration: 'none' }}>Tourist Guide</Link>
           </div>
         </div>
 
@@ -45,10 +45,10 @@ const Sidebar = ({ role, loading }) => {
           {/* Branding & Profile Info */}
           <div>
             <h2 className="text-2xl cursor-pointer font-semibold text-center text-gray-800 ">
-              <Link to="/">Tourist Guide</Link>
+              <Link to="/" style={{ textDecoration: 'none' }}>Tourist Guide</Link>
             </h2>
             <div className="flex flex-col items-center mt-6 -mx-2">
-              <Link to="/dashboard">
+              <Link to="/dashboard" style={{ textDecoration: 'none' }}>
                 <img
                   className="object-cover w-24 h-24 mx-2 rounded-full"
                   src={user?.photoURL}
@@ -56,13 +56,13 @@ const Sidebar = ({ role, loading }) => {
                   referrerPolicy="no-referrer"
                 />
               </Link>
-              <Link to="/dashboard">
-                <h4 className="mx-2 mt-2 font-medium text-gray-800  hover:underline">
+              <Link to="/dashboard" style={{ textDecoration: 'none' }}>
+                <h4 className="mx-2 mt-2 font-medium text-gray-800 ">
                   {user?.displayName}
                 </h4>
               </Link>
-              <Link to="/dashboard">
-                <p className="mx-2 mt-1 text-sm font-medium text-gray-600  hover:underline">
+              <Link to="/dashboard" style={{ textDecoration: 'none' }}>
+                <p className="mx-2 mt-1 text-sm font-medium text-gray-600">
                   {user?.email}
                 </p>
               </Link>

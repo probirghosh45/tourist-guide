@@ -73,7 +73,7 @@ const MyReviews = () => {
                     :
                     <tr>
                       <td colSpan="4">
-                        <div className="text-center py-20 text-xl">You Dont add any review yet.. 😟 Please <Link to="/services" className='text-primary'>Add</Link>
+                        <div className="text-center py-20 text-xl">You Dont add any review yet.. 😟 Please <Link to="/services" style={{ textDecoration: 'none' }} className='text-primary'>Add</Link>
                         </div>
                       </td>
                     </tr>

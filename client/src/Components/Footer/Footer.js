@@ -37,25 +37,25 @@ const Footer = () => {
 
 
                             <p>
-                                <NavLink to="/services" className="text-white text-decoration-none small-text">
+                                <NavLink to="/services" style={{ textDecoration: 'none' }} className="text-white text-decoration-none small-text">
                                     Dhaka
                                 </NavLink>
                             </p>
 
                             <p>
-                                <NavLink to="/services" className="text-white text-decoration-none small-text">
+                                <NavLink to="/services" style={{ textDecoration: 'none' }} className="text-white text-decoration-none small-text">
                                     Mymensingh
                                 </NavLink>
                             </p>
 
                             <p>
-                                <NavLink to="/services" className="text-white text-decoration-none small-text">
+                                <NavLink to="/services" style={{ textDecoration: 'none' }} className="text-white text-decoration-none small-text">
                                     Rajshahi
                                 </NavLink>
                             </p>
 
                             <p>
-                                <NavLink to="/services" className="text-white text-decoration-none small-text">
+                                <NavLink to="/services" style={{ textDecoration: 'none' }} className="text-white text-decoration-none small-text">
                                     Rangpur
                                 </NavLink>
                             </p>
