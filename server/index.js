@@ -8,7 +8,14 @@ const app = express();
 const port = process.env.port || 5000;
 
 //MiddleWare
-app.use(cors());
+// app.use(cors());
+app.use(
+  cors({
+  origin: true,
+  optionsSuccessStatus: 200,
+  credentials: true,
+  })
+  );
 require("dotenv").config();
 
 app.use(express.json());
