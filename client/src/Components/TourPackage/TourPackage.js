@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import './TourPackage.css';
+import "./TourPackage.css";
 
 const TourPackage = ({ tourpackage }) => {
   console.log(tourpackage);
-  const { img, description, tourPlace, time, days, taka } = tourpackage;
+  const { img, description, tourPlace, time, days, taka ,_id } = tourpackage;
 
   return (
     <div className="col product">
@@ -20,13 +20,14 @@ const TourPackage = ({ tourpackage }) => {
           <p className=" card-text more-small-text text-muted text-center">
             {days}
           </p>
-        <h5 className="days card-text more-small-text text-muted text-center">
+          <h5 className="days card-text more-small-text text-muted text-center">
             {time} <br /> <span>{taka}</span>
           </h5>
         </div>
-        <Link style={{ textDecoration: 'none' }}>
-          <div className="google-btn">
-            <button className=" google-btn btn animate__animated animate__fadeInUp">
+        
+        <Link to={`/tour-package-booking/${_id}`} style={{ textDecoration: "none" }}>
+          <div className="row justify-content-center">
+            <button className="btn btn-success text-white px-4 w-75 rounded-0 order-btn ">
               Book Now
             </button>
           </div>
@@ -40,7 +41,6 @@ export default TourPackage;
 
 // import React from 'react';
 // import { Link } from "react-router-dom";
-
 
 // const TourPackage = () => {
 //     return (

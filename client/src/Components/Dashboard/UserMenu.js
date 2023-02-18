@@ -17,7 +17,7 @@ const UserMenu = () => {
 
         <span className='mx-4 font-medium'>My Bookings</span>
       </NavLink>
-      <NavLink
+      {/* <NavLink
         to='wishlist' style={{ textDecoration: 'none' }}
         className={({ isActive }) =>
           `flex items-center px-4 py-2 mt-3 transition-colors duration-300 transform  hover:bg-gray-300   hover:text-gray-700 ${
@@ -28,7 +28,7 @@ const UserMenu = () => {
         <FingerPrintIcon className='w-5 h-5' />
 
         <span className='mx-4 font-medium'>Wishlist</span>
-      </NavLink>
+      </NavLink> */}
       <NavLink
         to='my-review'style={{ textDecoration: 'none' }}
         className={({ isActive }) =>

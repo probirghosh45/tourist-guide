@@ -94,6 +94,17 @@ const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`${process.env.REACT_APP_API_URL}/booking/${params.id}`),
       },
+
+      {
+        path: "/tour-package-booking/:id",
+        element: (
+          <PrivateRoute>
+            <Booking />
+          </PrivateRoute>
+        ),
+        loader: ({ params }) =>
+          fetch(`${process.env.REACT_APP_API_URL}/tour-packages/${params.id}`),
+      },
     ],
   },
 

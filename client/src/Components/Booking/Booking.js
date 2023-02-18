@@ -7,6 +7,7 @@ import BookingForm from "../BookingForm/BookingForm";
 
 const Booking = () => {
   const booking = useLoaderData();
+  console.log("Booking" , booking);
   const [reviews, setReviews] = useState([]);
   const { user } = useContext(AuthContext);
   const stamp = new Date().getTime()
@@ -63,6 +64,9 @@ const Booking = () => {
       .catch((err) => console.error(err));
   }, [booking?._id]);
 
+
+  
+
   return (
     <>
       <div className="place-order py-5">
@@ -72,13 +76,13 @@ const Booking = () => {
         <Container>
           <Row>
             <Col md={6} xs={12} className="text-center left-div my-3">
-              <img src={booking?.image} alt="" className="img-size pt-3" />
+              <img src={booking?.image ? booking?.image : booking?.img } alt="" className="img-size pt-3" />
 
               <p className="products-card-para primary pt-4 pb-2">
-                Name: {booking?.spotName}
+                {booking?.spotName ? booking?.spotName  : booking?.tourPlace}
               </p>
               <p className="products-card-para primary pb-2">
-                Name: {booking?.description}
+                 {booking?.description}
               </p>
             </Col>
             <Col md={6} xs={12} className="my-3">

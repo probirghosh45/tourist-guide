@@ -6,7 +6,7 @@ import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
 import "./Booking.css";
 
 const BookingForm = (props) => {
-  const {spotName, cost } = props.booking;
+  const {spotName, cost , tourPlace , taka} = props.booking;
   const { user } = useContext(AuthContext);
   // console.log(user);
   // const [date,setDate] =useState()
@@ -55,8 +55,8 @@ const BookingForm = (props) => {
           readOnly
           defaultValue={user?.email}
         />
-        <input {...register("spotName")} type="text" readOnly defaultValue={spotName} />
-        <input {...register("cost")} type="text" readOnly defaultValue={cost} />
+        <input {...register("spotName")} type="text" readOnly defaultValue={spotName ?  spotName : tourPlace} />
+        <input {...register("cost")} type="text" readOnly defaultValue={cost ? cost : taka} />
         <input {...register("dateData")} type="date" required />
         {errors.dateData && (
             <p className="text-red-500">{errors.dateData.message}</p>
