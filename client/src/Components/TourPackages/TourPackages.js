@@ -7,7 +7,7 @@ const TourPackages = () => {
     console.log(packages);
 
     useEffect(() => {
-        fetch("/packagesDB.json") 
+        fetch(`${process.env.REACT_APP_API_URL}/tour-packages`) 
             .then(res => res.json())
             .then(data => {setPackages(data)
                 // const reverseData = data.slice().reverse();
