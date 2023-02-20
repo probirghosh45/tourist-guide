@@ -5,6 +5,9 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
 // import { AuthContext } from '../Contexts/AuthProvider';
+import { BsFillTelephoneFill } from 'react-icons/bs';
+import {  FiLogIn } from 'react-icons/fi';
+import {  FiLogOut } from 'react-icons/fi';
 import "./Header.css";
 
 const Header = () => {
@@ -19,6 +22,28 @@ const Header = () => {
 
   return (
     <>
+    <section class=" py-2">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <ul class="nav">
+                        <li className="ps-1 d-flex"> <span className="pt-1 pe-2"><BsFillTelephoneFill/></span>+012 345 6789</li>
+                        <li class="ps-3"><i class="fa fa-envelope"></i> info@example.com</li>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <ul class="nav float-end">
+                      
+                        <li class="me-3"><a href="/"><i class="fab fa-facebook-f "></i></a></li>
+                        <li class="me-3"><a href="/"><i class="fab fa-twitter "></i></a></li>
+                        <li class="me-3"><a href="/"><i class="fab fa-linkedin-in"></i></a></li>
+                        <li class="me-3"><a href="/"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="/"><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
       <Navbar collapseOnSelect expand="lg" sticky="top" variant="light">
         <Container>
           <Navbar.Brand href="#home">
@@ -63,7 +88,7 @@ const Header = () => {
                     <button className="signIn">Dashboard</button>
                   </Nav.Link>
                   <Nav.Link as={Link} to="/dashboard">
-                    <button className="signIn" onClick={handleLogOut}>Sign Out</button>
+                    <button className="signIn d-flex onClick={handleLogOut}"> <span className="pt-2 pe-2"><FiLogOut/></span> Sign Out</button>
                   </Nav.Link>
                   <Link
                     id="user-profile"
@@ -88,7 +113,7 @@ const Header = () => {
                 </>
               ) : (
                 <Nav.Link as={Link} to="/login">
-                  <button className="signIn">Sign in</button>
+                  <button className="signIn d-flex "> <span className="pt-2 pe-2">< FiLogIn/></span> Sign in</button>
                 </Nav.Link>
               )}
             </Nav>
