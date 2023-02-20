@@ -10,6 +10,7 @@ import OurMenus from '../OurMenus/OurMenus';
 import OurServices from '../OurServices/OurServices';
 import Review from '../Review/Review';
 import WhyBookingUs from '../WhyBookingUs/WhyBookingUs';
+import RequestQoute from '../RequestQoute/RequestQoute';
 
 const Home = () => {
     return (
@@ -17,10 +18,11 @@ const Home = () => {
             <Banner></Banner>
             <OurServices></OurServices>
             <OurMenus></OurMenus>
-            <Destination></Destination>
             <Hotel></Hotel>
+            <Destination></Destination>
             <WhyBookingUs></WhyBookingUs>
             <Culture></Culture>
+            <RequestQoute></RequestQoute>
             <KeepGrowing></KeepGrowing>
             <Review></Review>
             <NewsLatter></NewsLatter>
