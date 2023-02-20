@@ -1,9 +1,9 @@
-import React, { useRef } from 'react';
-import emailjs from '@emailjs/browser';
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import { Col, Container, Row } from "react-bootstrap";
 import "./Contact.css";
 import MessengerCustomerChat from "react-messenger-customer-chat";
-import Swal from 'sweetalert2';
+import Swal from "sweetalert2";
 
 const Contact = () => {
   const form = useRef();
@@ -11,22 +11,25 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_dzz98ef', 'template_38truc8', form.current, 'rGxrrhDcrhglFcINx')
-      .then((result) => {
-        if(result.text==="OK"){
-          Swal.fire(
-            'Good job!',
-            'Message Sent Successfully 🎉',
-            'success'
-          )
-          form.reset();
-        }
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_Service_ID,
+        process.env.REACT_APP_Template_ID,
+        form.current,
+        process.env.REACT_APP_User_ID
+      )
+      .then(
+        (result) => {
+          if (result.text === "OK") {
+            Swal.fire("Good job!", "Message Sent Successfully 🎉", "success");
+            form.reset();
+          }
           // console.log(result.text);
-      }, (error) => {
+        },
+        (error) => {
           console.log(error.text);
-      });
-
-
+        }
+      );
   };
   return (
     <>
@@ -70,13 +73,13 @@ const Contact = () => {
                                   type="text"
                                   className="effect-1"
                                   placeholder="Your Name"
-                                  name="user_name" 
+                                  name="user_name"
                                   required="required"
                                 />
                                 <span className="Focus-border"></span>
                               </div>
                               <div className="col-lg-6">
-                              <input
+                                <input
                                   type="email"
                                   className="effect-1"
                                   name="user_email"
@@ -87,15 +90,13 @@ const Contact = () => {
                               </div>
                             </div>
 
-
-
                             <div className="form-row">
-                            <div className="col-lg-6">
+                              <div className="col-lg-6">
                                 <input
                                   type="number"
                                   className="effect-1"
                                   placeholder="Phone Number"
-                                  name="user_phone_number" 
+                                  name="user_phone_number"
                                 />
                                 <span className="Focus-border"></span>
                               </div>
@@ -103,12 +104,11 @@ const Contact = () => {
                                 <input
                                   type="text"
                                   className="effect-1"
-                                  name="message" 
+                                  name="message"
                                   placeholder="Type Your Message"
                                 />
                                 <span className="Focus-border"></span>
                               </div>
-
                             </div>
                             <div className="form-row pt-5">
                               <div className="col-lg-6">
@@ -118,7 +118,9 @@ const Contact = () => {
                                 </p>
                               </div>
                               <div className="col-lg-4">
-                                <button className="btn11" type="submit" >Send Message</button>
+                                <button className="btn11" type="submit">
+                                  Send Message
+                                </button>
                               </div>
                             </div>
                           </div>
@@ -130,10 +132,6 @@ const Contact = () => {
               </div>
             </Col>
           </Row>
-          <MessengerCustomerChat
-            pageId="touristguide001"
-            appId="731879315210573"
-          />
         </Container>
       </section>
     </>

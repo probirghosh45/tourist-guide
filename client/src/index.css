@@ -33,39 +33,3 @@ code {
   color: #fff;
 }
 
-
-.nav-link {
-  font-weight: 600;
-  color: #fff;
-  /* color: rgb(178, 29, 51) !important; */
-  }
-
-  .nav-link:hover {
-      color: rgb(88, 13, 29) !important;
-      }
-
-  .tourist{
-      font-weight: 800;
-  }
-
-
-.bg-orange{
-background-color: #FF4800;
-}
-.bg-orange:hover{
-background-color: #D93D00;
-/* color: white; */
-}
-
-.text-orange, .text-orange:hover{
-color: #FF4800;
-}
-
-.nav-link:hover{
-background-color: #FF4800;
-color: white;
-
-}
-.package{
-color: black;
-}
