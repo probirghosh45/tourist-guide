@@ -107,12 +107,12 @@ const Footer = () => {
 
                             <p className="small-text">
                                 <i className="fas fa-envelope me-3"></i>
-                                info@beautyofruralbengal.com
+                                supriyadebnathdev@gmail.com
                             </p>
 
                             <p className="small-text">
                                 <i className="fas fa-phone me-3"></i>
-                                +880 199 777 822
+                                +88016**502211
                             </p>
 
                             <div className="col-md-6 col-lg-12 text-center footer-i ">
