@@ -8,6 +8,11 @@ import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
 import { BsFillTelephoneFill } from 'react-icons/bs';
 import {  FiLogIn } from 'react-icons/fi';
 import {  FiLogOut } from 'react-icons/fi';
+import {  FaFacebookF } from 'react-icons/fa';
+import {  FaTwitter } from 'react-icons/fa';
+import {  FaLinkedinIn } from 'react-icons/fa';
+import {  FaInstagram } from 'react-icons/fa';
+import {  FaYoutube } from 'react-icons/fa';
 import "./Header.css";
 
 const Header = () => {
@@ -32,19 +37,18 @@ const Header = () => {
                     </ul>
                 </div>
                 <div class="col-sm-6">
-                    <ul class="nav float-end">
-                      
-                        <li class="me-3"><a href="/"><i class="fab fa-facebook-f "></i></a></li>
-                        <li class="me-3"><a href="/"><i class="fab fa-twitter "></i></a></li>
-                        <li class="me-3"><a href="/"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li class="me-3"><a href="/"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="/"><i class="fab fa-youtube"></i></a></li>
+                    <ul class="nav float-end pt-2">
+                    <Link to="/" class="me-3">< FaFacebookF /></Link>
+                    <Link to="/" class="me-3">< FaTwitter /></Link>
+                    <Link to="/" class="me-3">< FaLinkedinIn /></Link>
+                    <Link to="/" class="me-3">< FaFacebookF /></Link>
+                    <Link to="/" class="me-3">< FaYoutube /></Link>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-      <Navbar collapseOnSelect expand="lg" sticky="top" variant="light">
+      <Navbar collapseOnSelect expand="lg" sticky="top" bg="dark" variant="dark">
         <Container>
           <Navbar.Brand href="#home">
             <img
@@ -87,8 +91,8 @@ const Header = () => {
                   <Nav.Link as={Link} to="/dashboard">
                     <button className="signIn">Dashboard</button>
                   </Nav.Link>
-                  <Nav.Link as={Link} to="/dashboard">
-                    <button className="signIn d-flex onClick={handleLogOut}"> <span className="pt-2 pe-2"><FiLogOut/></span> Sign Out</button>
+                  <Nav.Link as={Link} to="/">
+                    <button onClick={handleLogOut} className="signIn d-flex "> <span className="pt-2 pe-2"><FiLogOut/></span> Sign Out</button>
                   </Nav.Link>
                   <Link
                     id="user-profile"

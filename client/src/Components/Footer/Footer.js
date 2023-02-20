@@ -134,18 +134,14 @@ const Footer = () => {
                 </div>
                 {/* Copyright */}
             <div
-                className="text-center p-3 small-text "
-                // style={{ backgroundColor: "rgba(0, 0, 0, 0.6)" }}
+                className="text-center align-items-center justify-content-center p-3 small-text "
             >
-                <span className="me-2">© 2022 Copyright</span>
-               {/* <span className='y'> Catering & Event Management</span> */}
-
+                <span className="me-2">© 2023 Copyright</span>
                 <NavLink to="/" className="text-white text-decoration-none">
-                    Beauty Of Rural Bangal
+                    Beauty Of Rural Bengal
                 </NavLink>
             </div>
             </section>
-
             
         </footer>
     );
