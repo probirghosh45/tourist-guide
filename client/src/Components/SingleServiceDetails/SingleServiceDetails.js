@@ -28,6 +28,7 @@ const SingleServiceDetails = ({ service}) => {
               {duration} {cost}
             </h5>
             <h5 className="card-text text-center">{seats?.length > 0 ? `You Can Book  ${seats[0]} ` : 'Try Another Day'}</h5>
+            <h6 className="card-text text-center">{seats?.length ? seats?.length : 0} {seats?.length > 1 ? 'Bookings' : 'Booking'} Available</h6>
           </div>
          {
           seats?.length > 0 ?
