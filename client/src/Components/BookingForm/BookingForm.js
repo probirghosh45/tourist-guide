@@ -2,12 +2,14 @@ import React, { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
+import { format } from 'date-fns';
 
 import "./Booking.css";
 
-const BookingForm = (props) => {
-  const {spotName, cost , tourPlace , taka} = props.booking;
+const BookingForm = ({booking,selectedDate}) => {
+  const {spotName, cost , tourPlace , taka} = booking;
   const { user } = useContext(AuthContext);
+  const date = format(selectedDate, 'PP');
   // console.log(user);
   // const [date,setDate] =useState()
   // console.log("date",date);
@@ -35,7 +37,7 @@ const BookingForm = (props) => {
   };
   useEffect(() => {
     reset();
-  }, [props, reset]);
+  }, [booking, reset]);
 
   return (
     <div className="confirm-form w-75  mx-auto py-3">
@@ -57,7 +59,7 @@ const BookingForm = (props) => {
         />
         <input {...register("spotName")} type="text" readOnly defaultValue={spotName ?  spotName : tourPlace} />
         <input {...register("cost")} type="text" readOnly defaultValue={cost ? cost : taka} />
-        <input {...register("dateData")} type="date" required />
+        {/* <input {...register("dateData")} type="date" required /> */}
         {errors.dateData && (
             <p className="text-red-500">{errors.dateData.message}</p>
           )}
