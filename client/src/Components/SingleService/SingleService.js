@@ -4,6 +4,7 @@ import { useLoaderData } from "react-router-dom";
 import SingleServiceDetails from "../SingleServiceDetails/SingleServiceDetails";
 import { DayPicker } from "react-day-picker";
 import { format } from "date-fns";
+import Booking from "../Booking/Booking";
 
 const SingleService = () => {
   const spot = useLoaderData();
@@ -53,9 +54,10 @@ const SingleService = () => {
       <h3 className='text-center text-secondary font-bold py-4'>You have select {format(selectedDate, 'PP')}</h3>
         <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
           {spot.map((service) => (
-            <SingleServiceDetails key={service._id} service={service} />
+            <SingleServiceDetails key={service._id} service={service}/>
           ))}
         </div>
+        <Booking selectedDate={selectedDate} ></Booking>
       </Container>
     </div>
   );

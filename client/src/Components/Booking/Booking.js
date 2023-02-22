@@ -5,21 +5,20 @@ import { useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
 import BookingForm from "../BookingForm/BookingForm";
 import { DayPicker } from "react-day-picker";
-import { format } from 'date-fns';
+import { format } from "date-fns";
 // import Calendar from 'react-calendar';
-const Booking = () => {
+const Booking = ({selectedDate}) => {
   const booking = useLoaderData();
   console.log("Booking", booking);
   const [reviews, setReviews] = useState([]);
   const { user } = useContext(AuthContext);
   const stamp = new Date().getTime();
-  const [selectedDate, setSelectedDate] = useState(new Date());
-  const date = format(selectedDate, 'PP');
+  // const date = format(selectedDate, "PP");
+
   // const [value, onChange] = useState(new Date());
   const handleReview = (e) => {
     e.preventDefault();
     const form = e.target;
-
 
     const review = {
       serviceName: booking?.spotName,
@@ -69,43 +68,36 @@ const Booking = () => {
         <h2 className="text-center my-4 place-order-header">
           Your Booking Information
         </h2>
+        {/* <h3 className='text-center text-secondary font-bold py-4'>You have select {format(selectedDate, 'PP')}</h3> */}
+
         <Container>
+
           <Row>
-            <Col md={6} xs={12} className="text-center my-3">
+              <Col md={6} xs={12} className="text-center my-3">
               <img
                 src={booking?.image ? booking?.image : booking?.img}
                 alt=""
                 className="img-size pt-3"
               />
-            </Col>
-            <Col md={6} xs={12} className="text-center my-3">
               <p className="products-card-para primary pt-4 pb-2">
                 {booking?.spotName ? booking?.spotName : booking?.tourPlace}
               </p>
               <p className="products-card-para primary pb-2">
                 {booking?.description}
               </p>
-            </Col>
-          </Row>
 
-          <Row>
-            <Col md={6} xs={12} className="my-3">
-              <div className="text-center mr-6 sm:w-full">
-                <DayPicker
-                  mode="single"
-                  selected={selectedDate}
-                  onDayClick={setSelectedDate}
-                />
-              </div>
-              {/* <Calendar onChange={onChange} value={value} /> */}
+            {/* <div className="text-center mr-6 sm:w-full">
+              <DayPicker
+                mode="single"
+                selected={selectedDate}
+                onSelect={setSelectedDate}
+              />
+            </div> */}
+            {/* <Calendar onChange={onChange} value={value} /> */}
             </Col>
 
             <Col md={6} xs={12} className="my-3">
-            <h3 className='text-center text-secondary font-bold'>You have select {format(selectedDate, 'PP')}</h3>
-              <BookingForm
-                selectedDate={selectedDate}
-                booking={booking}
-              ></BookingForm>
+              <BookingForm selectedDate={selectedDate} booking={booking}></BookingForm>
             </Col>
           </Row>
           <section className="text-gray-600 body-font bg-gray-100 p-20 mt-11">

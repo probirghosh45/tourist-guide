@@ -2,14 +2,11 @@ import React, { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
 import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
-import { format } from 'date-fns';
-
 import "./Booking.css";
 
 const BookingForm = ({booking,selectedDate}) => {
   const {spotName, cost , tourPlace , taka} = booking;
   const { user } = useContext(AuthContext);
-  const date = format(selectedDate, 'PP');
   // console.log(user);
   // const [date,setDate] =useState()
   // console.log("date",date);

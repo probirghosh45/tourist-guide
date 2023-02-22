@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-const SingleServiceDetails = ({ service }) => {
+const SingleServiceDetails = ({ service}) => {
   console.log(service);
   const { _id, image, district, spotName, description, duration, cost , distance } =
     service;
