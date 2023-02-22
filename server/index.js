@@ -5,7 +5,7 @@ var jwt = require("jsonwebtoken");
 const ObjectId = require("mongodb").ObjectId;
 
 const app = express();
-const port = process.env.port || 5000;
+const port = process.env.port || 7500;
 
 //MiddleWare
 // app.use(cors());

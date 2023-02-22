@@ -33,3 +33,11 @@ code {
   color: #fff;
 }
 
+.disabled__link {
+  pointer-events: none;
+}
+
+
+.Link__button {
+  text-decoration: none;
+}

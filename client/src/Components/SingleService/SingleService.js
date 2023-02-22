@@ -57,7 +57,6 @@ const SingleService = () => {
             <SingleServiceDetails key={service._id} service={service}/>
           ))}
         </div>
-        <Booking selectedDate={selectedDate} ></Booking>
       </Container>
     </div>
   );
