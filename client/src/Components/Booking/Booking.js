@@ -73,13 +73,13 @@ const Booking = () => {
         <Container>
 
           <Row>
-              <Col md={6} xs={12} className="text-center my-3">
+              <Col md={6} xs={12} className="text-center my-5 pt-3">
               <img
                 src={booking?.image ? booking?.image : booking?.img}
                 alt=""
                 className="img-size pt-3"
               />
-              <p className="products-card-para primary pt-4 pb-2">
+              <p className="products-card-para primary pt-10 pb-2">
                 {booking?.spotName ? booking?.spotName : booking?.tourPlace}
               </p>
               <p className="products-card-para primary pb-2">

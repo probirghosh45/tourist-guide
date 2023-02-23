@@ -32,7 +32,7 @@ const Header = () => {
             <div class="row">
                 <div class="col-sm-6">
                     <ul class="nav">
-                        <li className="ps-1 d-flex"> <span className="pt-1 pe-2"><BsFillTelephoneFill/></span>+012 345 6789</li>
+                        <li className="ps-1 d-flex"> <span className="pt-1 pe-2"><BsFillTelephoneFill/></span>+88016**502211</li>
                         <li class="ps-3"><i class="fa fa-envelope"></i> supriyadebnathdev@gmail.com</li>
                     </ul>
                 </div>
