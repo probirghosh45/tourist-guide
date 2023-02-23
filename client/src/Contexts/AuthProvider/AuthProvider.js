@@ -11,6 +11,7 @@ export default function AuthProvider({ children }) {
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(false)
     const [selectedDate, setSelectedDate] = useState(new Date());
+    const [availableSeats, setAvailableSeats] = useState(null);
 
     // functions
     // create user with email and password
@@ -60,7 +61,7 @@ export default function AuthProvider({ children }) {
         return () => unsubscribe();
     }, [])
 
-    const authInfo = { user, providerSignIn, loading, logOut, createUser, signIn, setProfileInfo , selectedDate, setSelectedDate}
+    const authInfo = { user, providerSignIn, loading, logOut, createUser, signIn, setProfileInfo , selectedDate, setSelectedDate,availableSeats, setAvailableSeats}
     return (
         <AuthContext.Provider value={authInfo}>
             {children}

@@ -29,7 +29,7 @@ import MyReview from "../Pages/dashboard/Users/MyReview";
 import AllReview from "../Pages/dashboard/Moderator/AllReview";
 import Welcome from "../Components/Dashboard/Welcome";
 import BecomeAModerator from "../Pages/dashboard/Users/BecomeAModerator";
-import MyReviewEdit from "../Components/Review/MyReviewEdit";
+// import MyReviewEdit from "../Components/Review/MyReviewEdit";
 import Checkout from "../Pages/dashboard/Users/Checkout";
 const router = createBrowserRouter([
   {
@@ -56,8 +56,8 @@ const router = createBrowserRouter([
       {
         path: "/division/:id",
         element: <SingleService />,
-        loader: ({ params }) =>
-          fetch(`${process.env.REACT_APP_API_URL}/division/${params.id}`),
+        // loader: ({ params }) =>
+        //   fetch(`${process.env.REACT_APP_API_URL}/division/${params.id}`),
       },
       {
         path: "/contact",
