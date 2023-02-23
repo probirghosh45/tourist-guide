@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../Contexts/AuthProvider/AuthProvider';
 import useTitle from '../../../hooks/useTitle';
 import { Link } from 'react-router-dom';
-
+import { TbCurrencyTaka } from 'react-icons/tb'
 
 const MyBooking = () => {
     
@@ -111,6 +111,12 @@ const MyBooking = () => {
               scope='col'
               className='px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal'
             >
+              Phone Number
+            </th>
+            <th
+              scope='col'
+              className='px-5 py-3 bg-white  border-b border-gray-200 text-gray-800  text-left text-sm uppercase font-normal'
+            >
               Date
             </th>
             <th
@@ -159,14 +165,19 @@ const MyBooking = () => {
               <p className='text-gray-900 whitespace-no-wrap'>
               {booking.addressData}
               </p>
-            </td>             
+            </td>  
+            <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
+              <p className='text-gray-900 whitespace-no-wrap'>
+              {booking.phoneNumber}
+              </p>
+            </td>           
             <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
               <p className='text-gray-900 whitespace-no-wrap'>
               {booking.dateData}
               </p>
             </td>
             <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
-              <p className='text-gray-900 whitespace-no-wrap'>${booking.cost}</p>
+              <p className='text-gray-900 whitespace-no-wrap d-flex'><TbCurrencyTaka/>{booking.cost}</p>
             </td>
             <td className='px-5 py-5 border-b border-gray-200 bg-white text-sm'>
              

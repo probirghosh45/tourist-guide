@@ -107,12 +107,12 @@ const Footer = () => {
 
                             <p className="small-text">
                                 <i className="fas fa-envelope me-3"></i>
-                                supriyadebnathdev@gmail.com
+                                info@beautyruralbengal.com
                             </p>
 
                             <p className="small-text">
                                 <i className="fas fa-phone me-3"></i>
-                                +88016**502211
+                                +8801621502211
                             </p>
 
                             <div className="col-md-6 col-lg-12 text-center footer-i ">
