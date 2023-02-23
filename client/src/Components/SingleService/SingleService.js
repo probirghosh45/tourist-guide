@@ -17,19 +17,19 @@ const SingleService = () => {
   const { selectedDate, setSelectedDate } = useContext(AuthContext);
   const date = format(selectedDate, 'PP');
 
-  const { data: spot = [], refetch, isLoading } = useQuery({
-    queryKey: ['spot', date],
-    queryFn: async () => {
-        const res = await fetch(`${process.env.REACT_APP_API_URL}/division/${id}?date=${date}`);
-        const data = await res.json();
-        return data
-    }
-});
+//   const { data: spot = [], refetch, isLoading } = useQuery({
+//     queryKey: ['spot', date],
+//     queryFn: async () => {
+//         const res = await fetch(`${process.env.REACT_APP_API_URL}/division/${id}?date=${date}`);
+//         const data = await res.json();
+//         return data
+//     }
+// });
 
-  // const [spot,setSpot] = useState()
-  // fetch(`${process.env.REACT_APP_API_URL}/division/${id}`)
-  // .then((response) => response.json())
-  // .then((data) => setSpot(data));
+  const [spot,setSpot] = useState()
+  fetch(`${process.env.REACT_APP_API_URL}/division/${id}`)
+  .then((response) => response.json())
+  .then((data) => setSpot(data));
 
 
 
