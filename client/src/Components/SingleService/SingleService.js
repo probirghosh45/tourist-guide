@@ -10,9 +10,9 @@ import { useQuery } from "@tanstack/react-query";
 // import { useContext } from "react";
 
 const SingleService = () => {
-  // const spot = useLoaderData();
+  const spot = useLoaderData();
 
-  let { id } = useParams();
+  // let { id } = useParams();
   // console.log("params",id);
   const { selectedDate, setSelectedDate } = useContext(AuthContext);
   const date = format(selectedDate, 'PP');
@@ -26,10 +26,10 @@ const SingleService = () => {
 //     }
 // });
 
-  const [spot,setSpot] = useState()
-  fetch(`${process.env.REACT_APP_API_URL}/division/${id}`)
-  .then((response) => response.json())
-  .then((data) => setSpot(data));
+  // const [spot,setSpot] = useState()
+  // fetch(`${process.env.REACT_APP_API_URL}/division/${id}`)
+  // .then((response) => response.json())
+  // .then((data) => setSpot(data));
 
 
 
