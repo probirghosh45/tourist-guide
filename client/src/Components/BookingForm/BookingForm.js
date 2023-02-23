@@ -1,3 +1,4 @@
+import { format } from "date-fns";
 import React, { useContext, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "react-hot-toast";
@@ -56,7 +57,7 @@ const BookingForm = ({booking}) => {
         />
         <input {...register("spotName")} type="text" readOnly defaultValue={spotName ?  spotName : tourPlace} />
         <input {...register("cost")} type="text" readOnly defaultValue={cost ? cost : taka} />
-        <input {...register("dateData")} type="text" readOnly defaultValue={selectedDate} />
+        <input {...register("dateData")} type="text" readOnly defaultValue={format(selectedDate, 'PP')} />
         {/* <input {...register("dateData")} type="date" required /> */}
         {errors.dateData && (
             <p className="text-red-500">{errors.dateData.message}</p>
