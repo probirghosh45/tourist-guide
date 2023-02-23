@@ -10,6 +10,7 @@ export default function AuthProvider({ children }) {
     // hooks
     const [user, setUser] = useState(null)
     const [loading, setLoading] = useState(false)
+    const [selectedDate, setSelectedDate] = useState(new Date());
 
     // functions
     // create user with email and password
@@ -59,7 +60,7 @@ export default function AuthProvider({ children }) {
         return () => unsubscribe();
     }, [])
 
-    const authInfo = { user, providerSignIn, loading, logOut, createUser, signIn, setProfileInfo }
+    const authInfo = { user, providerSignIn, loading, logOut, createUser, signIn, setProfileInfo , selectedDate, setSelectedDate}
     return (
         <AuthContext.Provider value={authInfo}>
             {children}

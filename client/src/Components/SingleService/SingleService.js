@@ -1,16 +1,17 @@
-import React, { useState } from "react";
+import React, { useContext} from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { useLoaderData } from "react-router-dom";
 import SingleServiceDetails from "../SingleServiceDetails/SingleServiceDetails";
 import { DayPicker } from "react-day-picker";
 import { format } from "date-fns";
-import Booking from "../Booking/Booking";
+import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
+// import { UserContext } from "../../App";
+// import { useContext } from "react";
 
 const SingleService = () => {
   const spot = useLoaderData();
-  //   console.log("spot", spot)
-  const [selectedDate, setSelectedDate] = useState(new Date());
-  const date = format(selectedDate, "PP");
+
+const { selectedDate, setSelectedDate } = useContext(AuthContext);
   return (
     <div className="mb-4">
       <div className="service-banner text-center">

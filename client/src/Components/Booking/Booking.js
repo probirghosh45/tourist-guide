@@ -7,11 +7,11 @@ import BookingForm from "../BookingForm/BookingForm";
 import { DayPicker } from "react-day-picker";
 import { format } from "date-fns";
 // import Calendar from 'react-calendar';
-const Booking = ({selectedDate}) => {
+const Booking = () => {
   const booking = useLoaderData();
   console.log("Booking", booking);
   const [reviews, setReviews] = useState([]);
-  const { user } = useContext(AuthContext);
+  const { user,selectedDate} = useContext(AuthContext);
   const stamp = new Date().getTime();
   // const date = format(selectedDate, "PP");
 
@@ -85,15 +85,6 @@ const Booking = ({selectedDate}) => {
               <p className="products-card-para primary pb-2">
                 {booking?.description}
               </p>
-
-            {/* <div className="text-center mr-6 sm:w-full">
-              <DayPicker
-                mode="single"
-                selected={selectedDate}
-                onSelect={setSelectedDate}
-              />
-            </div> */}
-            {/* <Calendar onChange={onChange} value={value} /> */}
             </Col>
 
             <Col md={6} xs={12} className="my-3">

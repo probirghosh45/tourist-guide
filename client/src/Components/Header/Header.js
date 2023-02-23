@@ -50,7 +50,7 @@ const Header = () => {
     </section>
       <Navbar collapseOnSelect expand="lg" sticky="top" bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">
+          <Navbar.Brand as={Link} to="/">
             <img
               src="https://i.ibb.co/NCcdyxf/travel-logo-design-agency-vector-inspiration-template-218267349.jpg"
               alt=""
