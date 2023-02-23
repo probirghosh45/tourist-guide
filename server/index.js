@@ -157,8 +157,8 @@ async function run() {
     app.get("/division/:id", async (req, res) => {
       const id = req.params.id;
       const query = { division: id };
-      const result = await spotCollection.find(query).toArray();
-      res.send(result);
+      const availableSeats = await spotCollection.find(query).toArray();
+      res.send(availableSeats);
 
       // get the booking information of the previous spot date
 
