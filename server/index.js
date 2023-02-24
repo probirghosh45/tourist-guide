@@ -11,7 +11,7 @@ const port = process.env.port || 7500;
 // app.use(cors());
 app.use(
   cors({
-    origin: true,
+    origin: "https://tourist-guide-7864f.web.app",
     optionsSuccessStatus: 200,
     credentials: true,
   })
