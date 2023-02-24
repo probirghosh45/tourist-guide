@@ -35,6 +35,9 @@ const BookingForm = ({ booking }) => {
         if (data.insertedId) {
           toast.success("Booking Successful 🎉");
         }
+        else{
+          toast.error(data.message);
+      }
         reset();
       });
   };
