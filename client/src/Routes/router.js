@@ -56,8 +56,8 @@ const router = createBrowserRouter([
       {
         path: "/division/:id",
         element: <SingleService />,
-        loader: ({ params }) =>
-          fetch(`${process.env.REACT_APP_API_URL}/division/${params.id}`),
+        // loader: ({ params }) =>
+        //   fetch(`${process.env.REACT_APP_API_URL}/division/${params.id}`),
       },
       {
         path: "/contact",
