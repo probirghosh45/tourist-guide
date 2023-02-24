@@ -154,39 +154,41 @@ async function run() {
     });
 
     // Manage spot GET requests
-    app.get("/division/:id", async (req, res) => {
-      const id = req.params.id;
-      const query = { division: id };
-      const result = await spotCollection.find(query).toArray();
-      res.send(result);
-    });
-
     // app.get("/division/:id", async (req, res) => {
     //   const id = req.params.id;
     //   const query = { division: id };
-    //   const availableSeats = await spotCollection.find(query).toArray();
-    //   res.send(availableSeats);
-
-    //   // get the booking information of the previous spot date
-
-    //   const date = req.params.date;
-    //   console.log("date",date);
-    //   const bookingQuery = { dateData: date };
-    //   const alreadyBooked = await bookingCollection
-    //     .find(bookingQuery)
-    //     .toArray();
-    //   console.log("booked list", alreadyBooked);
-    //   availableSeats.forEach((option) => {
-    //     const seatBooked = alreadyBooked.filter(
-    //       (book) => book.spotName === option.name
-    //     );
-    //     const bookedSlots = seatBooked.map((book) => book.seat);
-    //     const remainingSlots = option.seats.filter(
-    //       (seat) => !bookedSlots.includes(seat)
-    //     );
-    //     option.seats = remainingSlots;
-    //   });
+    //   const result = await spotCollection.find(query).toArray();
+    //   res.send(result);
     // });
+
+    app.get("/division/:id", async (req, res) => {
+      const id = req.params.id;
+      const query = { division: id };
+      const date = req.query.date;
+      // console.log("date",date);
+      const options = await spotCollection.find(query).toArray();
+      // console.log("options",options);
+
+      // get the booking information of the previous spot date
+
+      const bookingQuery = { dateData: date };
+      const alreadyBooked = await bookingCollection
+        .find(bookingQuery)
+        .toArray();
+      console.log("booked list", alreadyBooked);
+      options?.forEach((option) => {
+        const optionBooked = alreadyBooked?.filter(
+          (book) => book?.spotName === option?.spotName
+        );
+        // console.log("optionBooked", optionBooked);
+        const bookedSeats = optionBooked?.map((book) => book?.seat);
+        const remainingSeats = option?.seats?.filter(
+          (seat) => !bookedSeats?.includes(seat)
+        );
+        option.seats = remainingSeats;
+      });
+      res.send(options);
+    });
 
     // POST booking
     app.post("/booking", async (req, res) => {
