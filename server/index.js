@@ -9,13 +9,20 @@ const port = process.env.port || 7500;
 
 //MiddleWare
 // app.use(cors());
-app.use(
-  cors({
-    origin: "https://tourist-guide-7864f.web.app",
-    optionsSuccessStatus: 200,
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: "https://tourist-guide-7864f.web.app",
+//     optionsSuccessStatus: 200,
+//     credentials: true,
+//   })
+// );
+const corsConfig = {
+  origin: 'https://tourist-guide-7864f.web.app',
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE']
+}
+app.use(cors(corsConfig))
+app.options("", cors(corsConfig))
 require("dotenv").config();
 
 app.use(express.json());
