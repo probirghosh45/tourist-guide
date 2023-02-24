@@ -16,13 +16,24 @@ const port = process.env.port || 7500;
 //     credentials: true,
 //   })
 // );
-const corsConfig = {
-  origin: 'https://tourist-guide-7864f.web.app',
-  credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE']
+// const corsConfig = {
+//   origin: 'https://tourist-guide-7864f.web.app',
+//   credentials: true,
+//   methods: ['GET', 'POST', 'PUT', 'DELETE']
+// }
+// app.use(cors(corsConfig))
+// app.options("", cors(corsConfig))
+
+const cors=require("cors");
+const corsOptions ={
+   origin:'*', 
+   credentials:true,    
+   optionSuccessStatus:200,
 }
-app.use(cors(corsConfig))
-app.options("", cors(corsConfig))
+
+app.use(cors(corsOptions))
+
+
 require("dotenv").config();
 
 app.use(express.json());
